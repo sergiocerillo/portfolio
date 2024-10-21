@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@300;400;500;600&family=Noto+Serif:wght@300;400;500&display=swap');
+
+body {
+    background-color:   #202124;
+    color:              #FFFFFF;
+    font-family:        'Encode Sans', sans-serif;
+}
+
+/* 
+    font-family:        'Noto Serif', serif; */
