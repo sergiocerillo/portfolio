@@ -8,9 +8,9 @@
   --ink: #ECE8DE;
   --ink-dim: #ABA9A0;
   --muted: #74746E;
-  --accent: #E8B34A;      /* amber — design */
+  --accent: #E85D97;      /* rosa — design */
   --accent-ink: #14161B;
-  --accent-2: #6C8EF5;    /* blue — front-end/código */
+  --accent-2: #4ECDA0;    /* verde — front-end/código */
   --line: rgba(236, 232, 222, 0.10);
   --line-strong: rgba(236, 232, 222, 0.20);
   --radius-s: 4px;
@@ -145,8 +145,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   border-radius: 999px;
   border: 1px solid;
 }
-.tag--design { color: var(--accent); border-color: rgba(232,179,74,.4); background: rgba(232,179,74,.08); }
-.tag--frontend { color: var(--accent-2); border-color: rgba(108,142,245,.4); background: rgba(108,142,245,.08); }
+.tag--design { color: var(--accent); border-color: rgba(232,93,151,.4); background: rgba(232,93,151,.08); }
+.tag--frontend { color: var(--accent-2); border-color: rgba(78,205,160,.4); background: rgba(78,205,160,.08); }
 
 /* =========================================================
    NAV
@@ -377,8 +377,8 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   font-family: var(--font-mono);
   font-size: .64rem;
   color: var(--accent);
-  border: 1px solid rgba(232,179,74,.4);
-  background: rgba(232,179,74,.08);
+  border: 1px solid rgba(232,93,151,.4);
+  background: rgba(232,93,151,.08);
   padding: .1rem .5rem;
   border-radius: 999px;
 }
@@ -449,13 +449,13 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   color: rgba(20,22,27,.85);
   font-size: 1.1rem;
 }
-.thumb--1 { background: linear-gradient(135deg, #E8B34A, #C98A2C); }
-.thumb--2 { background: linear-gradient(135deg, #6C8EF5, #3E5BD8); color: #eef; }
-.thumb--3 { background: linear-gradient(135deg, #E8B34A, #6C8EF5); }
-.thumb--4 { background: linear-gradient(135deg, #7FBFA0, #3E7D63); color: #eef; }
-.thumb--5 { background: linear-gradient(135deg, #E88A4A, #C9522C); color: #221; }
-.thumb--6 { background: linear-gradient(135deg, #B08AE8, #6E4CB0); color: #eef; }
-.thumb--7 { background: linear-gradient(135deg, #6C8EF5, #E8B34A); }
+.thumb--1 { background: linear-gradient(135deg, #E85D97, #C9407A); }
+.thumb--2 { background: linear-gradient(135deg, #F291C1, #C9407A); }
+.thumb--3 { background: linear-gradient(135deg, #E85D97, #4ECDA0); }
+.thumb--4 { background: linear-gradient(135deg, #6FE0B8, #3BAE8A); }
+.thumb--5 { background: linear-gradient(135deg, #45C08C, #227A5A); color: #eef; }
+.thumb--6 { background: linear-gradient(135deg, #55D6A3, #2E9973); color: #eef; }
+.thumb--7 { background: linear-gradient(135deg, #4ECDA0, #E85D97); }
 
 .project-card__body { padding: 1.5rem; }
 .project-card__body .tag { margin-bottom: .8rem; }
@@ -655,16 +655,16 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   font-size: clamp(1.4rem, 4vw, 2.4rem);
   color: rgba(20,22,27,.85);
 }
-.art--pan { background: linear-gradient(135deg, #E8B34A, #C98A2C); }
-.art--projeta { background: linear-gradient(135deg, #6C8EF5, #3E5BD8); }
-.art--projeta span { color: #eef; }
-.art--maua { background: linear-gradient(135deg, #7FBFA0, #3E7D63); }
-.art--maua span { color: #eef; }
-.art--unica { background: linear-gradient(135deg, #B08AE8, #6E4CB0); }
+.art--pan { background: linear-gradient(135deg, #E85D97, #C9407A); }
+.art--projeta { background: linear-gradient(135deg, #F291C1, #C9407A); }
+.art--projeta span { color: #221; }
+.art--maua { background: linear-gradient(135deg, #6FE0B8, #3BAE8A); }
+.art--maua span { color: #14161B; }
+.art--unica { background: linear-gradient(135deg, #55D6A3, #2E9973); }
 .art--unica span { color: #eef; }
-.art--norden { background: linear-gradient(135deg, #6C8EF5, #E8B34A); }
-.art--nova { background: linear-gradient(135deg, #E88A4A, #C9522C); }
-.art--nova span { color: #221; }
+.art--norden { background: linear-gradient(135deg, #4ECDA0, #E85D97); }
+.art--nova { background: linear-gradient(135deg, #45C08C, #227A5A); }
+.art--nova span { color: #eef; }
 
 /* =========================================================
    CASE STUDY — BODY
