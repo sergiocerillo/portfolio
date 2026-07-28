@@ -33,7 +33,7 @@
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
   const filterEmpty = document.getElementById('filterEmpty');
-  const skillBars = document.querySelectorAll('.skill-bar');
+  const skillBars = document.querySelectorAll('.skill-star');
   const backToTop = document.getElementById('backToTop');
   const copyBtn = document.getElementById('copyEmailBtn');
   const copyLabel = document.getElementById('copyEmailLabel');
@@ -149,30 +149,17 @@
   --------------------------------------------- */
   function animateSkillBar(bar) {
     const level = parseInt(bar.dataset.level, 10) || 0;
-    const fill = bar.querySelector('.skill-bar__fill');
-    const pctEl = bar.querySelector('.skill-bar__pct');
-    
-    if (fill) {
-      setTimeout(() => {
-        fill.style.width = `${level}%`;
-      }, 100);
-    }
-
-    if (!pctEl) return;
+    const fill = bar.querySelector('.skill-star__fill');
+    if (!fill) return;
 
     if (prefersReducedMotion) {
-      pctEl.textContent = `${level}%`;
+      fill.style.width = `${level}%`;
       return;
     }
 
-    const duration = 900;
-    const start = performance.now ? performance.now() : Date.now();
-    function step(ts) {
-      const progress = Math.min(1, (ts - start) / duration);
-      pctEl.textContent = `${Math.round(progress * level)}%`;
-      if (progress < 1) raf(step);
-    }
-    raf(step);
+    setTimeout(() => {
+      fill.style.width = `${level}%`;
+    }, 100);
   }
 
   if (skillBars.length) {
