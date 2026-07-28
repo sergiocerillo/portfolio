@@ -13,6 +13,9 @@
   });
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const raf = window.requestAnimationFrame
+    ? window.requestAnimationFrame.bind(window)
+    : (cb) => setTimeout(() => cb(Date.now()), 16);
 
   /* ---------------------------------------------
      Referências do DOM (todas no topo, para nunca
@@ -30,6 +33,7 @@
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
   const filterEmpty = document.getElementById('filterEmpty');
+  const skillBars = document.querySelectorAll('.skill-bar');
   const backToTop = document.getElementById('backToTop');
   const copyBtn = document.getElementById('copyEmailBtn');
   const copyLabel = document.getElementById('copyEmailLabel');
@@ -141,6 +145,56 @@
   }
 
   /* ---------------------------------------------
+     Skills: animação de barras de progresso
+  --------------------------------------------- */
+  function animateSkillBar(bar) {
+    const level = parseInt(bar.dataset.level, 10) || 0;
+    const fill = bar.querySelector('.skill-bar__fill');
+    const pctEl = bar.querySelector('.skill-bar__pct');
+    
+    if (fill) {
+      setTimeout(() => {
+        fill.style.width = `${level}%`;
+      }, 100);
+    }
+
+    if (!pctEl) return;
+
+    if (prefersReducedMotion) {
+      pctEl.textContent = `${level}%`;
+      return;
+    }
+
+    const duration = 900;
+    const start = performance.now ? performance.now() : Date.now();
+    function step(ts) {
+      const progress = Math.min(1, (ts - start) / duration);
+      pctEl.textContent = `${Math.round(progress * level)}%`;
+      if (progress < 1) raf(step);
+    }
+    raf(step);
+  }
+
+  if (skillBars.length) {
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      skillBars.forEach(animateSkillBar);
+    } else {
+      const skillObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateSkillBar(entry.target);
+              skillObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 }
+      );
+      skillBars.forEach((bar) => skillObserver.observe(bar));
+    }
+  }
+
+  /* ---------------------------------------------
      Filtro de projetos
   --------------------------------------------- */
   filterButtons.forEach((btn) => {
@@ -162,7 +216,7 @@
   });
 
   /* ---------------------------------------------
-     Copiar e-mail
+     Copiar e-mail com feedback visual melhorado
   --------------------------------------------- */
   if (copyBtn && copyLabel) {
     const originalLabel = copyLabel.textContent;
@@ -170,11 +224,18 @@
       const email = copyBtn.dataset.email;
       try {
         await navigator.clipboard.writeText(email);
-        copyLabel.textContent = 'E-mail copiado ✓';
+        copyLabel.textContent = '✓ E-mail copiado!';
+        copyBtn.style.borderColor = 'var(--accent-2)';
+        copyBtn.style.color = 'var(--accent-2)';
       } catch (err) {
+        copyLabel.textContent = '✗ Erro ao copiar';
         window.location.href = `mailto:${email}`;
       }
-      setTimeout(() => { copyLabel.textContent = originalLabel; }, 2200);
+      setTimeout(() => { 
+        copyLabel.textContent = originalLabel;
+        copyBtn.style.borderColor = '';
+        copyBtn.style.color = '';
+      }, 2200);
     });
   }
 
