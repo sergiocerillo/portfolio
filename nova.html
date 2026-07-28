@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Nova Chevrolet — Sérgio Cerillo</title>
+<meta name="description" content="Análise de front-end: o sistema de grid, filtros de estoque e microinterações do site da Nova Chevrolet, construído sem frameworks de JavaScript.">
+<meta name="theme-color" content="#14161B">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nova Chevrolet — Sérgio Cerillo">
+<meta property="og:description" content="Análise de front-end: o sistema de grid, filtros de estoque e microinterações do site da Nova Chevrolet, construído sem frameworks de JavaScript.">
+<meta property="og:url" content="https://sergiocerillo.github.io/portfolio/nova.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314161B'/%3E%3Ctext x='50' y='64' font-family='monospace' font-weight='700' font-size='40' fill='%23E8B34A' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress-bar" id="progressBar"></div>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container" aria-label="Navegação principal">
+    <a href="index.html" class="nav__brand">SC<span class="nav__brand-dot">.</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#skills">Habilidades</a></li>
+      <li><a href="index.html#experiencia">Experiência</a></li>
+      <li><a href="index.html#projetos">Projetos</a></li>
+      <li><a href="index.html#escrita">Escrita</a></li>
+      <li><a href="index.html#contato" class="nav__cta">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <section class="case-hero">
+    <div class="container">
+      <a class="case-back reveal" href="index.html#projetos">← Voltar aos projetos</a>
+
+      <span class="tag tag--frontend reveal">Front-End</span>
+      <h1 class="case-hero__title reveal">Nova Chevrolet</h1>
+      <p class="case-hero__hook reveal">A camada de front-end de uma concessionária: grade de estoque, filtros e microinterações — tudo em HTML, CSS e JavaScript, sem framework.</p>
+
+      <dl class="case-meta reveal">
+          <div><dt>Cliente</dt><dd>Nova Chevrolet</dd></div>
+          <div><dt>Papel</dt><dd>Front-End</dd></div>
+          <div><dt>Ferramentas</dt><dd>HTML5 · CSS3 · JavaScript / jQuery</dd></div>
+          <div><dt>Link</dt><dd><a href="https://www.chevroletnova.com.br/" target="_blank" rel="noopener noreferrer">chevroletnova.com.br ↗</a></dd></div>
+      </dl>
+
+      <div class="case-hero__art reveal art--nova"><span>NOVA</span></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="case-body">
+
+        <p class="case-intro">
+          O poder do HTML e do CSS puro, sem uso de framework — é assim que sempre resumi esse projeto. O site da
+          Nova Chevrolet reúne dezenas de modelos, ofertas e unidades, e ainda assim toda a interface roda sem
+          React, Vue ou qualquer framework de JavaScript: só marcação semântica, CSS e um pouco de jQuery para as
+          interações.
+        </p>
+
+        <div class="case-note">
+          <span class="case-note__icon">i</span>
+          <p>Nota de transparência: o site roda hoje sobre uma plataforma maior de gestão de estoque automotivo,
+          responsável pelo catálogo de veículos e pelos preços. Esta análise olha especificamente para a camada de
+          front-end — a parte visual e de interação — a partir do que é possível observar publicamente no site
+          no ar.</p>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">01</span><h2>Grid de estoque</h2></div>
+          <div class="case-step__content">
+            <p>A vitrine de modelos e a lista de ofertas usam o mesmo padrão de card se repetindo dezenas de vezes
+            — imagem, nome do modelo, condição de pagamento e um botão de ação. Esse tipo de repetição é onde um
+            componente bem construído em CSS puro compensa: um único bloco de estilo, reaproveitado em qualquer
+            quantidade de itens, sem depender de um framework para isso.</p>
+          </div>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">02</span><h2>Filtros de busca</h2></div>
+          <div class="case-step__content">
+            <p>O painel de busca permite cruzar marca, modelo, ano, faixa de preço e loja — tudo em painéis que
+            abrem e fecham sem recarregar a página. É um padrão clássico de progressive enhancement: a navegação
+            principal continua sendo links reais (cada categoria tem sua própria URL), e o JavaScript entra só para
+            as camadas extras de interação, como abrir/fechar painéis e alternar entre "Novos" e "Seminovos".</p>
+          </div>
+        </div>
+
+        <div class="case-image">
+          <span class="case-image__icon">▢</span>
+          <p><!-- TODO: troque por um print real do painel de filtros --> espaço reservado para print do painel de busca</p>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">03</span><h2>Performance de imagem</h2></div>
+          <div class="case-step__content">
+            <p>Um detalhe que chama atenção: as imagens do site são servidas com parâmetros de redimensionamento na
+            própria URL — largura e qualidade ajustadas conforme o contexto (banner, card, thumbnail). É uma forma
+            simples e eficiente de manter o carregamento leve num site com centenas de fotos de veículos, sem
+            depender de uma lib pesada de otimização no front.</p>
+          </div>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">04</span><h2>Navegação e microinterações</h2></div>
+          <div class="case-step__content">
+            <p>Menu mobile com submenus aninhados, modal de cadastro para newsletter, widget de contato via
+            WhatsApp e aviso de cookies — todos esses elementos aparecem por cima do conteúdo principal e são
+            tipicamente construídos com pequenos blocos de JavaScript que adicionam ou removem uma classe CSS,
+            exatamente a mesma filosofia que já usei em outros projetos: o mínimo de JavaScript necessário para
+            fazer o CSS brilhar.</p>
+          </div>
+        </div>
+
+        <div class="case-result">
+          <h2>Considerações finais</h2>
+          <p>Mesmo dentro de uma plataforma maior, a camada de front-end continua sendo onde a experiência acontece
+          de verdade: um grid que não quebra em nenhum tamanho de tela, filtros que respondem rápido e imagens que
+          carregam no peso certo. Esse projeto resume bem algo em que acredito: dá para ir longe com HTML, CSS e
+          pouquíssimo JavaScript — o resto é disciplina.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="case-nav">
+    <div class="container case-nav__grid">
+      <a class="case-nav__link case-nav__link--prev" href="norden.html">
+        <span class="case-nav__label">← Anterior</span>
+        <span class="case-nav__title">Norden SA</span>
+      </a>
+      <a class="case-nav__link case-nav__link--next" href="pan.html">
+        <span class="case-nav__label">Próximo →</span>
+        <span class="case-nav__title">Banco PAN</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© <span id="year"></span> Sérgio Cerillo — feito com HTML, CSS e um pouco de JS, sem frameworks.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" hidden>↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

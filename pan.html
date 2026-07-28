@@ -1,222 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Banco PAN — Sérgio Cerillo</title>
+<meta name="description" content="Case de UX/UI: do site ao app do Banco PAN, da evolução do Design System ao redesenho de fluxos durante um rebranding completo.">
+<meta name="theme-color" content="#14161B">
 
-    <link rel="stylesheet" href="main.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Banco PAN — Sérgio Cerillo">
+<meta property="og:description" content="Case de UX/UI: do site ao app do Banco PAN, da evolução do Design System ao redesenho de fluxos durante um rebranding completo.">
+<meta property="og:url" content="https://sergiocerillo.github.io/portfolio/pan.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    
-    <title>Sérgio Cerillo - Design UX/Front-End</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314161B'/%3E%3Ctext x='50' y='64' font-family='monospace' font-weight='700' font-size='40' fill='%23E8B34A' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="p-4 w-100 sticky-lg-top">
-        <div class="container-fluid">
-            <div class="row justify-content-around align-items-center">
-                <div class="col">
-                    <h2>
-                        <a href="index.html" class="">
-                            <img src="imgs/logo.svg" alt="" class="d-block mx-auto mx-md-0 mb-4 mb-md-0">
-                        </a>
-                    </h2>
-                </div>
-                
-                <div class="col-xl-2 col-lg-3 col-md-6 col-12">
-                    <nav class="d-flex justify-content-around">
-                        <a href="projects.html" class="text-white-50 text-decoration-none fs-5 fw-normal">Projetos</a>
-                        <a href="https://wa.link/r7tgu2" class="text-white-50 text-decoration-none fs-5 fw-normal">Contato</a>
-                    </nav>
-                </div>
-            </div>
+<div class="progress-bar" id="progressBar"></div>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container" aria-label="Navegação principal">
+    <a href="index.html" class="nav__brand">SC<span class="nav__brand-dot">.</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#skills">Habilidades</a></li>
+      <li><a href="index.html#experiencia">Experiência</a></li>
+      <li><a href="index.html#projetos">Projetos</a></li>
+      <li><a href="index.html#escrita">Escrita</a></li>
+      <li><a href="index.html#contato" class="nav__cta">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <section class="case-hero">
+    <div class="container">
+      <a class="case-back reveal" href="index.html#projetos">← Voltar aos projetos</a>
+
+      <span class="tag tag--design reveal">UX/UI Design</span>
+      <h1 class="case-hero__title reveal">Banco PAN</h1>
+      <p class="case-hero__hook reveal">De site institucional a app: redesenhar parte da jornada digital de um banco em plena reformulação de marca.</p>
+
+      <dl class="case-meta reveal">
+          <div><dt>Cliente</dt><dd>Banco PAN</dd></div>
+          <div><dt>Papel</dt><dd>UX/UI Design</dd></div>
+          <div><dt>Ferramentas</dt><dd>Design System · Benchmarking · Prototipação</dd></div>
+      </dl>
+
+      <div class="case-hero__art reveal art--pan"><span>PAN</span></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="case-body">
+
+        <p class="case-intro">
+          Tive a chance de trabalhar em uma agência com peso em São Paulo, atendendo o <strong>Banco PAN</strong>
+          — antigo Banco Panamericano. Foi um período de bastante autonomia, transitando entre tecnologia, marketing
+          e lideranças executivas, sempre com um objetivo em comum: alinhar cada entrega ao novo rebranding do banco,
+          refletindo sua nova identidade visual e posicionamento estratégico.
+        </p>
+
+        <div class="case-note">
+          <span class="case-note__icon">i</span>
+          <p>Por acordo de confidencialidade, não posso compartilhar telas ou arquivos deste projeto. O relato
+          abaixo foca no processo, nas decisões e nos aprendizados — não nas entregas visuais.</p>
         </div>
-    </header>
 
-    
-
-    <section class="py-3 my-4">
-        <div class="container">
-            <div class="row ps-0 ms-0 ps-lg-5 ms-lg-5">
-                <div class="col-lg-8 col-md-10 col-12">
-                    
-                    
-                    <a href="projects.html" class="button-sm fulled mb-5 d-flex align-items-center">
-                        <i class="bi bi-arrow-left-short"></i>
-                        Voltar
-                    </a>
-
-                    <h1 class="display-4 fw-bold">
-                        Banco PAN
-                    </h1>
-                    <blockquote class="my-4">
-                        Tive a chance de trabalhar em uma agencia com grande nome em São Paulo, onde nela eu tinha como cliente o Banco PAN, antigo Banco Panamericano.
-                    </blockquote>
-                </div>   
-                <div class="col-lg-8 col-12">
-
-                    <div class="my-4">
-                        <h2 class="fw-bold">
-                            Contexto
-                        </h2>
-                        <p class="lh-lg fs-5">
-                            Durante minha atuação no Banco PAN, participei ativamente de diversas iniciativas de redesign, construção e evolução de produtos digitais. Foi um período de grande autonomia e conexão com diversas áreas — desde tecnologia e marketing até lideranças executivas. O principal desafio era garantir que todas as entregas estivessem alinhadas com o novo rebranding do banco, refletindo a nova identidade visual e posicionamento estratégico.
-                        </p>
-                    </div>
-
-                    <hr class="my-4">
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">
-                            1. Descoberta e Imersão
-                        </h3>
-                        <h4 class="fw-bold mb-2">
-                            Objetivo:
-                        </h4>
-                        <p class="lh-lg fs-5">
-                            Atualizar toda a presença digital do banco — incluindo site, blog, e novos recursos no app — alinhando com o novo rebranding e promovendo uma experiência mais moderna e eficaz para os usuários.
-                        </p>
-
-                        <p class="lh-lg fs-5 mb-0 mt-3">Atividades realizadas:</p>
-                        <ol class="lh-lg fs-6">
-                            <li>Entendimento do novo Design System aprovado internamente.</li>
-
-                            <li>Diagnóstico das páginas existentes e mapeamento dos pontos de atualização.</li>
-
-                            <li>Conexão com stakeholders de diversas áreas (produto, branding, tecnologia, CX).</li>
-
-                            <li>Estudo de canais concorrentes para análise de mercado.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">
-                            2. Benchmarking e Análise Competitiva
-                        </h3>
-                        
-                        <p class="lh-lg fs-5 mb-0 mt-3 fw-bold">Blog:</p>
-                        <ol class="lh-lg fs-6">
-                            <li>Pesquisa de mercado com foco em como outros bancos estruturavam seus blogs</li>
-
-                            <li>Identificação de boas práticas de SEO e usabilidade em grandes players.</li>
-
-                            <li>Decisão estratégica de focar em conteúdo orgânico e estrutura otimizada para Google, uma vez que o fluxo de navegação era simples.</li>
-                        </ol>
-                        
-                        <p class="lh-lg fs-5 mb-0 mt-3 fw-bold">Shopping no App:</p>
-                        <ol class="lh-lg fs-6">
-                            <li>Benchmarking com plataformas como Zoom e Buscapé, por seguirem o mesmo modelo de marketplace (sem venda direta, mas com redirecionamento para parceiros).</li>
-
-                            <li>Identificação de boas práticas de navegação, microinterações e destaque de produtos.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">
-                            3. Arquitetura da Informação e Definição
-                        </h3>
-                        
-                        <p class="lh-lg fs-5 mb-0 mt-3 fw-bold">Blog e Site:</p>
-                        <ol class="lh-lg fs-6">
-                            <li>Reorganização dos conteúdos e seções com foco em clareza e navegação.</li>
-
-                            <li>Evolução dos componentes do Design System conforme necessidades específicas surgiam.</li>
-
-                            <li>Adaptação responsiva e foco em acessibilidade.</li>
-                        </ol>
-
-                        
-                        <p class="lh-lg fs-5 mb-0 mt-3 fw-bold">Shopping no App:</p>
-                        <ol class="lh-lg fs-6">
-                            <li>Definição de fluxo centrado no usuário, com foco em simplicidade e conversão.</li>
-
-                            <li>Trabalho conjunto com o time de CX para construir jornadas fluídas e conectadas.</li>
-                            <li>Criação de jornadas orientadas por contexto de uso e intenção de busca.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">
-                            4. Prototipação e Design
-                        </h3>
-                        <ol class="lh-lg fs-6">
-                            <li>Criação das novas telas do site e blog, aplicando a nova identidade visual.</li>
-                            <li>Evolução de componentes do Design System com foco em escalabilidade e consistência.</li>
-                            <li>Modernização visual da home page do banco, com foco em performance e leveza visual.</li>
-                        </ol>
-
-                        <p class="lh-lg fs-5 mb-0 mt-3 fw-bold">Shopping no App:</p>
-                        <ol class="lh-lg fs-6">
-                            <li>Definição de fluxo centrado no usuário, com foco em simplicidade e conversão.</li>
-
-                            <li>Trabalho conjunto com o time de CX para construir jornadas fluídas e conectadas.</li>
-                            <li>Criação de jornadas orientadas por contexto de uso e intenção de busca.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">
-                            5. Validação e Aprovação
-                        </h3>
-                        <ol class="lh-lg fs-6">
-                            <li>Apresentação das propostas visuais e funcionais para os times de produto e diretoria.</li>
-                            <li>Alinhamentos semanais para refinamento de entregas e roadmap de implantação.</li>
-                            <li>No caso do Shopping no app, houve aprovação total por parte da diretoria, e o projeto foi implementado em apenas um mês.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">
-                            6. Iteração Contínua e Novos Desafios
-                        </h3>
-                        <p class="lh-lg fs-6 mb-0 mt-3">
-                            Ao longo do tempo, surgiram outros desafios que mostraram a importância de um mindset iterativo:
-                        </p>
-                        <ol class="lh-lg fs-6">
-                            <li>Criação de simuladores para páginas de empréstimos, com foco em experiência e conversão.</li>
-                            <li>Criação de novas páginas de captação de leads.</li>
-                            <li>Manutenção e expansão do Design System com base nos aprendizados reais das entregas.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">
-                            Considerações Finais
-                        </h3>
-                        <p class="lh-lg fs-5 mb-0 mt-3">
-                            Infelizmente, não posso compartilhar as telas e arquivos diretamente por questões de confidencialidade. Porém, acredito que as histórias e aprendizados vividos nesse período são reflexos de um trabalho colaborativo, estratégico e centrado no usuário.
-                            Foi um projeto que me fez crescer como designer e como profissional de produto, exercitando visão sistêmica, habilidades de facilitação e escuta ativa em todos os níveis da organização.
-                        </p>
-                    </div>
-
-                    <!-- <p class="lh-lg fs-5">
-                        Acredito e até posso falar com muita certeza, que foi um periodo onde eu realmente tive chance de me conectar com diferentes aréas, muito mais do que em outros trabalhos. Não somente pela autonomia que me foi dada, mas tambem por estar dentro do banco de forma ativa, propondo e discutindo diferentes produtos com diversos niveis de hierarquia que lá tem.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Dentro do periodo nos foi dado diferentes tipo de missões, dentre elas atualizar o site para todo o Reabranding aprovado no banco, antes de eu entrar. Durante os meses ficamos encarregados de criar as novas páginas do banco e atualizar todas que já existiam para o novo Design System, um Design System primeiramente criado por eles e em seguida atualizado por nós com diversas outras necessecidades que foram surgindo durante o Reabranding. O próximo desafio seria criar um novo layout para o blog do banco. Começamos a realizar benchmarking com a concorrencia para entender como outros bancos trabalhavam seu blog, por a ver pouca complexidade no decorrer da navegação preferimos focar em formas que o conteudo do blog possa ser engajado de forma organica no google. E aqui esta o resultado: <a href="https://www.bancopan.com.br/blog" target="_blank" class="text-info">https://www.bancopan.com.br/blog</a>.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Logo em seguida a ideia era, criar uma nova home page para o Banco, algo que não tivemos muitas dificuldades, pois era algo que eu já vinha mapeando e analisando do banco com outras marcas. Então a ideia foi somente modernizar componentes do DS e deixar a mais fluida. Não tenho numeros dos resultados somente as duas telas para usar de comparação <a href="https://bancopan.com.br/" class="text-info" target="_blank">https://bancopan.com.br/</a> X <a href="https://bancopan.com.br/home-d" target="_blank" class="text-info">https://bancopan.com.br/home-d</a>
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Nosso proximo desafio foi criar um novo Shopping no APP do Banco, esse desafio tive ao meu lado um CX e uauu como as coisas fluiam, as trocas, as interações e microinterações tudo fazia sentido. A ideia como antes, era começar por um benchmarking, com o diferencial que não iamos vender produtos dentro do app e sim direcionar o usuario para parceiro, assim como funciona o Zoom e Buscapé. E em um mês o Shopping estava pronto com a aprovação de todos os diretores do banco.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        E no decorrer do tempo novos desafios e propostas foram aparecendo. Como criação de simuladores para páginas de emprestimo, criação de captação de lead.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        O problema maior é que infelizmente não vou poder compartilhar telas e informações, pois sao informações que são do banco e ficou tudo no computador deles. O que quero trazer aqui são minhas historias e casos reais que vivi no dia a dia, numa troca que acredito que seja interessante para ambos.
-                    </p> -->
-                </div> 
-            </div>
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">01</span><h2>Descoberta e imersão</h2></div>
+          <div class="case-step__content">
+            <p><strong>Objetivo:</strong> atualizar toda a presença digital do banco — site, blog e novos recursos
+            no app — alinhando tudo ao novo rebranding e promovendo uma experiência mais moderna e eficaz.</p>
+            <ul class="case-list">
+              <li>Entendimento do novo Design System aprovado internamente.</li>
+              <li>Diagnóstico das páginas existentes e mapeamento dos pontos de atualização.</li>
+              <li>Conexão com stakeholders de produto, branding, tecnologia e CX.</li>
+              <li>Estudo de canais concorrentes para análise de mercado.</li>
+            </ul>
+          </div>
         </div>
-    </section>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">02</span><h2>Benchmarking e análise competitiva</h2></div>
+          <div class="case-step__content">
+            <p class="case-substep">Blog</p>
+            <ul class="case-list">
+              <li>Pesquisa de mercado com foco em como outros bancos estruturavam seus blogs.</li>
+              <li>Identificação de boas práticas de SEO e usabilidade em grandes players.</li>
+              <li>Decisão por focar em conteúdo orgânico e estrutura otimizada para busca, já que o fluxo de navegação era simples.</li>
+            </ul>
+            <p class="case-substep">Shopping no app</p>
+            <ul class="case-list">
+              <li>Benchmarking com plataformas como Zoom e Buscapé, por seguirem o mesmo modelo de marketplace — sem venda direta, com redirecionamento para parceiros.</li>
+              <li>Identificação de boas práticas de navegação, microinterações e destaque de produtos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">03</span><h2>Arquitetura da informação</h2></div>
+          <div class="case-step__content">
+            <p class="case-substep">Blog e site</p>
+            <ul class="case-list">
+              <li>Reorganização dos conteúdos e seções com foco em clareza e navegação.</li>
+              <li>Evolução dos componentes do Design System conforme as necessidades surgiam.</li>
+              <li>Adaptação responsiva e foco em acessibilidade.</li>
+            </ul>
+            <p class="case-substep">Shopping no app</p>
+            <ul class="case-list">
+              <li>Definição de fluxo centrado no usuário, com foco em simplicidade e conversão.</li>
+              <li>Trabalho conjunto com o time de CX para construir jornadas fluidas e conectadas.</li>
+              <li>Criação de jornadas orientadas por contexto de uso e intenção de busca.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">04</span><h2>Prototipação e design</h2></div>
+          <div class="case-step__content">
+            <p class="case-substep">Blog e site</p>
+            <ul class="case-list">
+              <li>Criação das novas telas do site e do blog, aplicando a nova identidade visual.</li>
+              <li>Evolução de componentes do Design System com foco em escalabilidade e consistência.</li>
+              <li>Modernização visual da home do banco, com foco em performance e leveza visual.</li>
+            </ul>
+            <p class="case-substep">Shopping no app</p>
+            <ul class="case-list">
+              <li>Wireframes de navegação por categoria, com destaque visual para os produtos dos parceiros.</li>
+              <li>Prototipação das telas de listagem e do redirecionamento para os parceiros.</li>
+              <li>Rodadas internas de teste de fluxo antes de levar a proposta para validação com a diretoria.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">05</span><h2>Validação e aprovação</h2></div>
+          <div class="case-step__content">
+            <ul class="case-list">
+              <li>Apresentação das propostas visuais e funcionais para os times de produto e diretoria.</li>
+              <li>Alinhamentos semanais para refinamento das entregas e do roadmap de implantação.</li>
+              <li>O Shopping no app teve aprovação total da diretoria e foi implementado em apenas um mês.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">06</span><h2>Iteração contínua</h2></div>
+          <div class="case-step__content">
+            <p>Ao longo do tempo, outros desafios reforçaram a importância de um mindset iterativo:</p>
+            <ul class="case-list">
+              <li>Criação de simuladores para páginas de empréstimos, com foco em experiência e conversão.</li>
+              <li>Criação de novas páginas de captação de leads.</li>
+              <li>Manutenção e expansão do Design System com base nos aprendizados reais de cada entrega.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="case-result">
+          <h2>Considerações finais</h2>
+          <p>Não posso compartilhar as telas deste projeto, mas as histórias e aprendizados vividos nesse período
+          refletem um trabalho colaborativo, estratégico e centrado no usuário.</p>
+          <p>Foi um projeto que me fez crescer como designer e como profissional de produto — exercitando visão
+          sistêmica, facilitação e escuta ativa em todos os níveis da organização.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="case-nav">
+    <div class="container case-nav__grid">
+      <a class="case-nav__link case-nav__link--prev" href="nova.html">
+        <span class="case-nav__label">← Anterior</span>
+        <span class="case-nav__title">Nova Chevrolet</span>
+      </a>
+      <a class="case-nav__link case-nav__link--next" href="projeta.html">
+        <span class="case-nav__label">Próximo →</span>
+        <span class="case-nav__title">Electrolux Projeta</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© <span id="year"></span> Sérgio Cerillo — feito com HTML, CSS e um pouco de JS, sem frameworks.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" hidden>↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,96 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Norden SA — Sérgio Cerillo</title>
+<meta name="description" content="Case de front-end: o projeto de 2017 que segue no ar até hoje, e o aprendizado de trabalhar lado a lado com quem desenha o layout.">
+<meta name="theme-color" content="#14161B">
 
-    <link rel="stylesheet" href="main.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Norden SA — Sérgio Cerillo">
+<meta property="og:description" content="Case de front-end: o projeto de 2017 que segue no ar até hoje, e o aprendizado de trabalhar lado a lado com quem desenha o layout.">
+<meta property="og:url" content="https://sergiocerillo.github.io/portfolio/norden.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    
-    <title>Sérgio Cerillo - Design UX/Front-End</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314161B'/%3E%3Ctext x='50' y='64' font-family='monospace' font-weight='700' font-size='40' fill='%23E8B34A' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="p-4 w-100 sticky-lg-top">
-        <div class="container-fluid">
-            <div class="row justify-content-around align-items-center">
-                <div class="col">
-                    <h2>
-                        <a href="index.html" class="">
-                            <img src="imgs/logo.svg" alt="" class="d-block mx-auto mx-md-0 mb-4 mb-md-0">
-                        </a>
-                    </h2>
-                </div>
-                
-                <div class="col-xl-2 col-lg-3 col-md-6 col-12">
-                    <nav class="d-flex justify-content-around">
-                        <a href="projects.html" class="text-white-50 text-decoration-none fs-5 fw-normal">Projetos</a>
-                        <a href="https://wa.link/r7tgu2" class="text-white-50 text-decoration-none fs-5 fw-normal">Contato</a>
-                    </nav>
-                </div>
-            </div>
+<div class="progress-bar" id="progressBar"></div>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container" aria-label="Navegação principal">
+    <a href="index.html" class="nav__brand">SC<span class="nav__brand-dot">.</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#skills">Habilidades</a></li>
+      <li><a href="index.html#experiencia">Experiência</a></li>
+      <li><a href="index.html#projetos">Projetos</a></li>
+      <li><a href="index.html#escrita">Escrita</a></li>
+      <li><a href="index.html#contato" class="nav__cta">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <section class="case-hero">
+    <div class="container">
+      <a class="case-back reveal" href="index.html#projetos">← Voltar aos projetos</a>
+
+      <span class="tag tag--frontend reveal">Front-End</span>
+      <h1 class="case-hero__title reveal">Norden SA</h1>
+      <p class="case-hero__hook reveal">Um projeto que segue no ar até hoje — e que me ensinou a importância de sentar ao lado de quem desenha antes de programar.</p>
+
+      <dl class="case-meta reveal">
+          <div><dt>Cliente</dt><dd>Norden SA</dd></div>
+          <div><dt>Papel</dt><dd>Front-End</dd></div>
+          <div><dt>Ano</dt><dd>2017</dd></div>
+          <div><dt>Link</dt><dd><a href="https://www.nordensa.com.br/index.html" target="_blank" rel="noopener noreferrer">nordensa.com.br ↗</a></dd></div>
+      </dl>
+
+      <div class="case-hero__art reveal art--norden"><span>NOR</span></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="case-body">
+
+        <p class="case-intro">
+          Recentemente descobri que esse projeto ainda está no ar, e fiquei genuinamente feliz com isso. Não foi o
+          projeto com mais desafios técnicos da minha trajetória — mas foi um dos que mais me ensinou sobre
+          processo.
+        </p>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">01</span><h2>O maior desafio não foi técnico</h2></div>
+          <div class="case-step__content">
+            <p>O maior desafio desse projeto foi o tempo — mas isso a gente tira de letra. O verdadeiro aprendizado
+            veio de outro lugar: sentar ao lado da pessoa responsável pelo layout para discutir juntos qual seria a
+            melhor solução, tanto para quem desenvolve quanto para quem desenha.</p>
+          </div>
         </div>
-    </header>
 
-    
-
-    <section class="py-3 my-4">
-        <div class="container">
-            <div class="row ps-0 ms-0 ps-lg-5 ms-lg-5">
-                <div class="col-lg-8 col-md-10 col-12">
-                    
-                    
-                    <a href="projects.html" class="button-sm fulled mb-5 d-flex align-items-center">
-                        <i class="bi bi-arrow-left-short"></i>
-                        Voltar
-                    </a>
-
-                    <h1 class="display-4 fw-bold">
-                        Norden SA
-                    </h1>
-                    <div class="my-4">
-                        
-                    </div>
-                </div>   
-                <div class="col-lg-8 col-12">
-                    <p class="lh-lg fs-5">
-                        Recentemente descobri que esse projeto ainda está no ar e fiquei muito feliz.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Esse projeto não trouxe tantos desafios, exceto pelo tempo, mas a gente tira isso de letra.
-                    </p>
-
-                    <blockquote class="my-4">
-                        🗣 Mas como assim Sérgio sem desafios? Não era você que adorava um desafio?
-                    </blockquote>
-    
-                    <p class="lh-lg fs-5">
-                        Pois sim adoro desafios. Mas acredito que alem de desafios e resultados o aprendizado que vem com cada projeto o que tambem é importante.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        O que eu levo de aprendizado durante o desenvolvimento desse projeto foi justamente estar ao lado da pessoa responsavel pelo layout. Até esse projeto nunca foi muito comum eu sentar ao lado de designers para discutir qual a melhor solução para eu desenvolvedor e para a pessoa designer. Em meados de 2017 ainda não era comum a discusão sobre o usuario.
-                    </p>
-
-                    <blockquote class="my-4">
-                        Antes do Figma era muito comum a criação desses layouts por Photoshop. E com o fim do Fireworks era importante ter uma noção interessante sobre o Photoshop.
-                    </blockquote>
-    
-                    <p class="lh-lg fs-5">
-                        Uma troca que desde que tive nesse projeto sempre fiz questão de estar perto do designers responsaveis pelo layout.
-                    </p>
-                    
-                    <a href="https://www.nordensa.com.br/index.html" target="_blank" class="button fulled mt-5 d-flex align-items-center">
-                        Conheça o projeto 
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-                </div> 
-            </div>
+        <div class="dialogue">
+          <p class="q">🗣️ Mas como assim, sem desafios? Não era você que adorava um desafio?</p>
+          <p class="a">💁🏼 E adoro. Mas acredito que, além de desafios e resultados, o aprendizado que vem com cada
+          projeto é igualmente importante.</p>
         </div>
-    </section>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">02</span><h2>Do Photoshop ao Figma</h2></div>
+          <div class="case-step__content">
+            <p>Em meados de 2017, ainda não era comum a discussão próxima sobre o usuário entre quem desenha e quem
+            programa. Antes do Figma, era comum criar layouts no Photoshop — e, com o fim do Fireworks, ter uma boa
+            noção de Photoshop havia se tornado importante mesmo para quem desenvolvia.</p>
+          </div>
+        </div>
+
+        <blockquote class="pull-quote">
+          <p>Desde esse projeto, sempre fiz questão de estar perto de quem desenha o layout.</p>
+        </blockquote>
+
+        <div class="case-result">
+          <h2>Considerações finais</h2>
+          <p>O aprendizado ficou: entender a solução junto com quem desenha vale tanto quanto qualquer entrega
+          técnica.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="case-nav">
+    <div class="container case-nav__grid">
+      <a class="case-nav__link case-nav__link--prev" href="unica.html">
+        <span class="case-nav__label">← Anterior</span>
+        <span class="case-nav__title">Use Única</span>
+      </a>
+      <a class="case-nav__link case-nav__link--next" href="nova.html">
+        <span class="case-nav__label">Próximo →</span>
+        <span class="case-nav__title">Nova Chevrolet</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© <span id="year"></span> Sérgio Cerillo — feito com HTML, CSS e um pouco de JS, sem frameworks.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" hidden>↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

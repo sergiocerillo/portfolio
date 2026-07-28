@@ -1,169 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Electrolux Projeta — Sérgio Cerillo</title>
+<meta name="description" content="Case de UX/UI: pesquisa, card sorting e a retomada do blog interno de uma plataforma B2B da Electrolux para profissionais de arquitetura e design.">
+<meta name="theme-color" content="#14161B">
 
-    <link rel="stylesheet" href="main.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Electrolux Projeta — Sérgio Cerillo">
+<meta property="og:description" content="Case de UX/UI: pesquisa, card sorting e a retomada do blog interno de uma plataforma B2B da Electrolux para profissionais de arquitetura e design.">
+<meta property="og:url" content="https://sergiocerillo.github.io/portfolio/projeta.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    
-    <title>Sérgio Cerillo - Design UX/Front-End</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314161B'/%3E%3Ctext x='50' y='64' font-family='monospace' font-weight='700' font-size='40' fill='%23E8B34A' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="p-4 w-100 sticky-lg-top">
-        <div class="container-fluid">
-            <div class="row justify-content-around align-items-center">
-                <div class="col">
-                    <h2>
-                        <a href="index.html" class="">
-                            <img src="imgs/logo.svg" alt="" class="d-block mx-auto mx-md-0 mb-4 mb-md-0">
-                        </a>
-                    </h2>
-                </div>
-                
-                <div class="col-xl-2 col-lg-3 col-md-6 col-12">
-                    <nav class="d-flex justify-content-around">
-                        <a href="projects.html" class="text-white-50 text-decoration-none fs-5 fw-normal">Projetos</a>
-                        <a href="https://wa.link/r7tgu2" class="text-white-50 text-decoration-none fs-5 fw-normal">Contato</a>
-                    </nav>
-                </div>
-            </div>
+<div class="progress-bar" id="progressBar"></div>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container" aria-label="Navegação principal">
+    <a href="index.html" class="nav__brand">SC<span class="nav__brand-dot">.</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#skills">Habilidades</a></li>
+      <li><a href="index.html#experiencia">Experiência</a></li>
+      <li><a href="index.html#projetos">Projetos</a></li>
+      <li><a href="index.html#escrita">Escrita</a></li>
+      <li><a href="index.html#contato" class="nav__cta">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <section class="case-hero">
+    <div class="container">
+      <a class="case-back reveal" href="index.html#projetos">← Voltar aos projetos</a>
+
+      <span class="tag tag--design reveal">UX/UI Design</span>
+      <h1 class="case-hero__title reveal">Electrolux Projeta</h1>
+      <p class="case-hero__hook reveal">O projeto mais interessante da minha trajetória: resgatar uma funcionalidade esquecida desde o MVP e transformá-la num canal de engajamento real.</p>
+
+      <dl class="case-meta reveal">
+          <div><dt>Cliente</dt><dd>Electrolux</dd></div>
+          <div><dt>Papel</dt><dd>UX/UI Design</dd></div>
+          <div><dt>Ferramentas</dt><dd>Card Sorting · Benchmarking · Wireframes</dd></div>
+      </dl>
+
+      <div class="case-hero__art reveal art--projeta"><span>ELE</span></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="case-body">
+
+        <p class="case-intro">
+          Atuei no desenvolvimento de uma plataforma da Electrolux voltada para profissionais de arquitetura e
+          design. Além dos fluxos principais, tive um papel ativo na retomada e entrega do blog interno da
+          plataforma — uma funcionalidade esquecida desde o MVP. Em colaboração com o PO e o time de desenvolvimento,
+          lidamos com desafios técnicos da VTEX e construímos uma solução centrada no usuário, priorizando conteúdos
+          visuais, navegabilidade e engajamento.
+        </p>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">01</span><h2>Contexto geral</h2></div>
+          <div class="case-step__content">
+            <ul class="case-list">
+              <li>Plataforma voltada para designers de interiores, arquitetos e construtoras montarem listas de produtos Electrolux para seus clientes.</li>
+              <li>Usuários precisavam se cadastrar, passar por aprovação e, então, montar e compartilhar suas listas.</li>
+              <li>A cada compra feita a partir de uma lista, o profissional acumulava pontos trocáveis com parceiros da marca.</li>
+              <li>A plataforma era construída na VTEX, o que impunha limitações técnicas e desafios de back-end.</li>
+            </ul>
+          </div>
         </div>
-    </header>
 
-    
-
-    <section class="py-3 my-4">
-        <div class="container">
-            <div class="row ps-0 ms-0 ps-lg-5 ms-lg-5">
-                <div class="col-lg-8 col-md-10 col-12">
-                    
-                    
-                    <a href="projects.html" class="button-sm fulled mb-5 d-flex align-items-center">
-                        <i class="bi bi-arrow-left-short"></i>
-                        Voltar
-                    </a>
-
-                    <h1 class="display-4 fw-bold">
-                        Electrolux Projeta
-                    </h1>
-                    <div class="my-4">
-                        
-                    </div>
-                </div>
-                
-                <div class="col-lg-8 col-12">
-
-                    <div class="my-4">
-                        <h2 class="fw-bold">Contexto</h2>
-                        <p class="lh-lg fs-5">
-                            Neste projeto, atuei no desenvolvimento de uma plataforma da Electrolux voltada para profissionais de arquitetura e design. 
-                            Além dos fluxos principais, tive um papel ativo na retomada e entrega do blog interno da plataforma — uma funcionalidade esquecida desde o MVP. 
-                            Em colaboração com o PO e o time de desenvolvimento, lidamos com desafios técnicos da VTEX e construímos uma solução centrada no usuário, 
-                            priorizando conteúdos visuais, navegabilidade e engajamento.
-                        </p>
-                    </div>
-
-                    <hr class="my-4">
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">1. Contexto Geral do Projeto</h3>
-                        <ol class="lh-lg fs-6">
-                            <li>Plataforma voltada para profissionais (designers de interiores, arquitetos, construtoras) criarem listas de produtos Electrolux para seus clientes.</li>
-                            <li>Usuários precisavam se cadastrar, passar por aprovação e, após isso, podiam montar listas de produtos e compartilhar com seus clientes.</li>
-                            <li>A cada compra via essas listas, o profissional acumulava pontos que poderiam ser trocados com parceiros da marca.</li>
-                            <li>A plataforma era construída na VTEX, o que impunha diversas limitações técnicas e desafios no back-end.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">2. Diagnóstico Inicial</h3>
-                        <ol class="lh-lg fs-6">
-                            <li>Ao entrar no projeto, o sistema já estava rodando, mas com muitas pendências e pontos críticos não resolvidos.</li>
-                            <li>A criação de fluxos foi tranquila, mas a plataforma VTEX apresentou barreiras de usabilidade e limitação para personalizações.</li>
-                            <li>O blog, planejado desde o MVP, havia sido deixado de lado — e foi retomado graças à colaboração próxima com o PO e os desenvolvedores.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">3. Pesquisa e Benchmarking</h3>
-                        <ol class="lh-lg fs-6">
-                            <li>Iniciei uma rodada de benchmarking para entender como outras plataformas tratavam conteúdos gerados por usuários.</li>
-                            <li>Identifiquei que o foco do blog não deveria estar em texto, mas sim em imagem — principal atrativo dos projetos a serem compartilhados.</li>
-                            <li>Ressaltei a importância de padronizar os títulos para manter coesão visual e facilitar a navegação.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">4. Ideação e Wireframes</h3>
-                        <ol class="lh-lg fs-6">
-                            <li>Desenvolvi wireframes focados em visual, priorizando cards com imagens grandes, títulos curtos e atrativos.</li>
-                            <li>Os layouts foram pensados para favorecer a exploração de conteúdo de forma orgânica e convidativa.</li>
-                            <li>Recebi reforço da cliente com a chegada de uma jornalista dedicada aos textos, fortalecendo a estratégia de conteúdo.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">5. Classificação de Conteúdo (Pesquisa com Usuários)</h3>
-                        <ol class="lh-lg fs-6">
-                            <li>Durante a prototipação, mapeei quase 50 variações de nomes para ambientes residenciais.</li>
-                            <li>Para evitar confusão, apliquei a técnica de Card Sorting com usuários reais da plataforma.</li>
-                            <li>Com base nas respostas, selecionei as duas opções mais votadas por ambiente e coletei insights adicionais para a categorização.</li>
-                        </ol>
-                    </div>
-
-                    <div class="mb-5">
-                        <h3 class="fw-bold mb-4">6. Colaboração e Entrega</h3>
-                        <p class="lh-lg fs-5">
-                            Todo o processo foi construído em cocriação com o PO e os programadores, o que facilitou a resolução de problemas técnicos e decisões rápidas.
-                            O blog foi finalmente implementado, trazendo um canal rico de engajamento e valorização do trabalho dos próprios usuários.
-                            Foi uma experiência de colaboração real, com decisões tomadas com base em dados, escuta ativa e foco constante no usuário.
-                        </p>
-                    </div>
-
-                    </div>
-
-
-                <!-- <div class="col-lg-8 col-12">
-                    <p class="lh-lg fs-5">
-                        Quando entrei no projeto, havia muitas coisas a serem resolvidas, já que se trata de um projeto enorme com várias condições de banco de dados e programação. A criação de fluxos não foi um problema, mas a plataforma VTEX foi o desafio.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        A plataforma funciona da seguinte maneira: o usuário (designer de interiores, arquitetos, construtoras) precisa se cadastrar e fornecer algumas informações, que serão submetidas a um processo de aprovação. Após a aprovação, o usuário terá acesso a um catálogo de produtos da Electrolux, podendo criar uma lista de produtos da marca para seu cliente. Ao compartilhar o link dessa lista, o usuário será recompensado com uma pontuação sempre que um item for comprado. Essa pontuação poderá ser usada com parceiros da Electrolux.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        No entanto, gostaria de focar na criação de um blog interno dentro da plataforma. Esse blog estava planejado desde o MVP, mas foi sendo deixado de lado gradualmente. No entanto, tanto eu quanto o Product Owner e, principalmente, os programadores sempre trabalhamos juntos para ouvir e compartilhar melhorias, até que finalmente conseguimos resolver todos os problemas e concentrar nossos esforços nesse blog.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Inicialmente, busquei referências e fiz um benchmark. Durante esse processo, descobri muitas coisas que foram ótimas para solucionar os problemas que surgiram. Além disso, percebi coisas óbvias, mas nem tanto. A intenção do blog era permitir que os usuários compartilhassem seus projetos, e até mesmo os clientes pudessem criar suas próprias postagens, incluindo eventos, fotos, convites, vídeos, entre outros.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Logo, entendi que o foco não seria em texto, mas sim em imagens. Portanto, concentrei-me nelas ao criar o wireframe, utilizando cards com imagens e títulos convidativos para que os usuários clicassem. Era importante manter um padrão nos títulos, com a mesma quantidade de letras e uma única linguagem. Para minha surpresa, sem nem mesmo perguntar à cliente, ela me apresentou uma jornalista que cuidaria dessa parte do texto. A felicidade que senti naquele momento era indescritível.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Durante o desenvolvimento do wireframe e ao realizar alguns benchmarks, surgiram algumas dúvidas, sendo a melhor delas relacionada à forma como cada ambiente interno das casas era chamado pelos usuários. Por exemplo, em relação à cozinha, existem diferentes tipos, como em U, em L, americana, apenas para citar alguns exemplos. Após pesquisar nomes para entender cada ambiente, encontrei quase 50 opções, o que tornaria inviável incluir todos eles, especialmente devido ao prazo curto. Decidi então realizar uma pesquisa com os usuários e encontrei na técnica de Card Sorting a melhor solução.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Após apenas uma semana, já obtive algumas respostas excelentes, das quais selecionei as duas mais votadas de cada ambiente para incluir no site, além de ganhar outros nomes como bônus.
-                    </p>
-                    
-                    <a href="https://projeta.electrolux.com.br/" target="_blank" class="button fulled mt-5 d-flex align-items-center">
-                        Conheça o projeto 
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-                </div>  -->
-            </div>
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">02</span><h2>Diagnóstico inicial</h2></div>
+          <div class="case-step__content">
+            <p>Ao entrar no projeto, o sistema já estava rodando, mas com muitas pendências e pontos críticos não
+            resolvidos. A criação de fluxos foi tranquila, mas a VTEX apresentava barreiras de usabilidade e
+            limitava boa parte das personalizações. O blog, planejado desde o MVP, havia ficado de lado — e só foi
+            retomado graças à colaboração próxima com o PO e os desenvolvedores.</p>
+          </div>
         </div>
-    </section>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">03</span><h2>Pesquisa e benchmarking</h2></div>
+          <div class="case-step__content">
+            <p>Iniciei uma rodada de benchmarking para entender como outras plataformas tratavam conteúdo gerado
+            por usuários.</p>
+          </div>
+        </div>
+
+        <blockquote class="pull-quote">
+          <p>O foco do blog não deveria estar no texto, mas na imagem — o principal atrativo dos projetos a serem compartilhados.</p>
+        </blockquote>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">04</span><h2>Ideação e wireframes</h2></div>
+          <div class="case-step__content">
+            <p>Desenvolvi wireframes focados em visual, priorizando cards com imagens grandes, títulos curtos e
+            atrativos. Os layouts foram pensados para favorecer uma exploração de conteúdo orgânica e convidativa.
+            A chegada de uma jornalista dedicada aos textos reforçou a estratégia de conteúdo.</p>
+          </div>
+        </div>
+
+        <div class="case-image">
+          <span class="case-image__icon">▢</span>
+          <p><!-- TODO: troque por uma imagem real do projeto --> espaço reservado para wireframe ou print da plataforma</p>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">05</span><h2>Card sorting com usuários</h2></div>
+          <div class="case-step__content">
+            <p>Durante a prototipação, mapeei quase 50 variações de nomes para ambientes residenciais. Para evitar
+            confusão, apliquei a técnica de <strong>Card Sorting</strong> com usuários reais da plataforma. Com base
+            nas respostas, selecionei as duas opções mais votadas por ambiente e coletei insights adicionais para a
+            categorização.</p>
+          </div>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">06</span><h2>Colaboração e entrega</h2></div>
+          <div class="case-step__content">
+            <p>Todo o processo foi construído em cocriação com o PO e os programadores, o que facilitou a resolução
+            de problemas técnicos e decisões rápidas. O blog foi finalmente implementado, trazendo um canal rico de
+            engajamento e valorização do trabalho dos próprios usuários.</p>
+          </div>
+        </div>
+
+        <div class="case-result">
+          <h2>Considerações finais</h2>
+          <p>Foi uma experiência de colaboração real, com decisões tomadas com base em dados, escuta ativa e foco
+          constante no usuário.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="case-nav">
+    <div class="container case-nav__grid">
+      <a class="case-nav__link case-nav__link--prev" href="pan.html">
+        <span class="case-nav__label">← Anterior</span>
+        <span class="case-nav__title">Banco PAN</span>
+      </a>
+      <a class="case-nav__link case-nav__link--next" href="maua.html">
+        <span class="case-nav__label">Próximo →</span>
+        <span class="case-nav__title">Instituto Mauá de Tecnologia</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© <span id="year"></span> Sérgio Cerillo — feito com HTML, CSS e um pouco de JS, sem frameworks.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" hidden>↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

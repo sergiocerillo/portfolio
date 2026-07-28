@@ -1,139 +1,463 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Sérgio Cerillo — UX/UI Design e Front-End Developer</title>
+<meta name="description" content="Sérgio Cerillo — designer UX/UI e desenvolvedor front-end com mais de 10 anos de experiência em agências e produtos digitais como Banco PAN, Electrolux, McCann Health e FCB Brasil.">
+<meta name="theme-color" content="#14161B">
 
-    <link rel="stylesheet" href="main.css">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sérgio Cerillo — UX/UI Design e Front-End Developer">
+<meta property="og:description" content="Mais de 10 anos criando experiências digitais que unem design e código.">
+<meta property="og:url" content="https://sergiocerillo.github.io/portfolio/">
+<meta property="og:locale" content="pt_BR">
+<!-- TODO: troque pela imagem real (1200x630px) para a prévia de compartilhamento -->
+<meta property="og:image" content="https://sergiocerillo.github.io/portfolio/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    
-    <title>Sérgio Cerillo - Design UX/Front-End</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314161B'/%3E%3Ctext x='50' y='64' font-family='monospace' font-weight='700' font-size='40' fill='%23E8B34A' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Structured data para SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sérgio Cerillo",
+  "jobTitle": "UX/UI Designer e Front-End Developer",
+  "url": "https://sergiocerillo.github.io/portfolio/",
+  "email": "mailto:sergio.cerillo@gmail.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/sergiocerillo/",
+    "https://github.com/sergiocerillo/",
+    "https://www.behance.net/sergiocerillo",
+    "https://sergiocerillo.medium.com/"
+  ]
+}
+</script>
 </head>
 <body>
-    <header class="p-4 w-100 sticky-lg-top">
-        <div class="container-fluid">
-            <div class="row justify-content-around align-items-center">
-                <div class="col">
-                    <h1>
-                        <a href="index.html" class="">
-                            <img src="imgs/logo.svg" alt="" class="d-block mx-auto mx-md-0 mb-4 mb-md-0">
-                        </a>
-                    </h1>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-md-6 col-12">
-                    <nav class="d-flex justify-content-around">
-                        <a href="projects.html" class="text-white-50 text-decoration-none fs-5 fw-normal">Projetos</a>
-                        <a href="https://wa.link/r7tgu2" class="text-white-50 text-decoration-none fs-5 fw-normal">Contato</a>
-                    </nav>
-                </div>
-            </div>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container" aria-label="Navegação principal">
+    <a href="#topo" class="nav__brand">SC<span class="nav__brand-dot">.</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#escrita">Escrita</a></li>
+      <li><a href="#contato" class="nav__cta">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="topo">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <p class="eyebrow reveal">// design + código</p>
+      <h1 class="hero__title reveal">
+        Sérgio Cerillo
+      </h1>
+      <p class="hero__role reveal">UX/UI Design e Front-End Developer</p>
+
+      <p class="hero__tagline reveal" id="typedLine">
+        <span id="typedText">Há mais de 10 anos criando experiências digitais que unem forma e função.</span><span class="caret" id="caret" aria-hidden="true"></span>
+      </p>
+
+      <div class="hero__actions reveal">
+        <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+        <a href="#contato" class="btn btn--ghost">Fale comigo</a>
+      </div>
+
+      <p class="hero__meta reveal">
+        <span class="code-comment">/* 10+ anos de estrada · 9 empresas · UX/UI + Front-End */</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <p class="eyebrow reveal">// sobre</p>
+      <h2 class="section__title reveal">Metade design, metade código.</h2>
+
+      <div class="about__grid">
+        <div class="about__portrait reveal" aria-hidden="true">
+          <!-- TODO: troque este bloco por <img src="sua-foto.jpg" alt="Sérgio Cerillo"> -->
+          <span class="about__monogram">SC</span>
         </div>
-    </header>
 
-    <section class="py-3 my-4">
-        <div class="container">
-            <div class="row mb-5 ps-0 ms-0 ps-lg-5 ms-lg-5">
-                <div class="col-lg-8 col-md-10 col-12">
-                    <h1 class="fw-bold fs-1 lh-base mb-5">Sérgio Cerillo,<br />Design UX/UI e Front-End Developer</h1>
+        <div class="about__text reveal">
+          <p>
+            Sou designer UX/UI e desenvolvedor front-end com mais de 10 anos de estrada em agências e produtos
+            digitais — de <strong>McCann Health</strong> e <strong>FCB Brasil</strong> a plataformas como
+            <strong>Banco PAN</strong> e <strong>Electrolux Projeta</strong>.
+          </p>
+          <p>
+            Transito entre pesquisa, wireframe e protótipo tanto quanto entre HTML, CSS e JavaScript — o que me
+            permite desenhar pensando em como algo será construído, e construir pensando em como será sentido por
+            quem usa. Gosto de simplificar fluxos complexos e, sempre que possível, fazer isso com o mínimo de
+            dependências possível.
+          </p>
+          <!-- TODO: revise esta bio com a sua própria voz antes de publicar -->
 
-                    <h2 class="fw-bold lh-base mb-2 fs-3">Parte da historia</h2>
-                    <h2 class="text-white-50 fs-4 fw-normal lh-base">Atuando a mais de 10 anos no mundo digital, busco criar experiencias que gerem emoções e conexões</h2>
-                </div>    
-            </div>
-            <div class="row ps-0 ms-0 ps-lg-5 ms-lg-5">
-                <div class="col-lg-8 col-md-10 col-12">
-                    <h2 class="fw-bold lh-base mb-4 fs-3">Experience</h2>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-                        <div class="col">
-                            <h4 class="fw-bold lh-base mb-2">MRM</h4>
-                            <p class="text-white-50 fs-5 fw-normal lh-base">
-                                <small>UX/UI Design<br />
-                                <span class="small">2024 - 2023</span></small>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <h4 class="fw-bold lh-base mb-2">ACCT global</h4>
-                            <p class="text-white-50 fs-5 fw-normal lh-base">
-                                <small>UX/UI Design<br />
-                                <span class="small">2023 - 2022</span></small>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <h4 class="fw-bold lh-base mb-2">fri.to</h4>
-                            <p class="text-white-50 fs-5 fw-normal lh-base">
-                                <small>UX/UI Design<br />
-                                <span class="small">2022 - 2021</span></small>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <h4 class="fw-bold lh-base mb-2">McCann Health</h4>
-                            <p class="text-white-50 fs-5 fw-normal lh-base">
-                                <small>Front-End Developer<br />
-                                <span class="small">2020 - 2019</span></small>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <h4 class="fw-bold lh-base mb-2">apis3</h4>
-                            <p class="text-white-50 fs-5 fw-normal lh-base">
-                                <small>Front-End Developer<br />
-                                <span class="small">2019 - 2017</span></small>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <h4 class="fw-bold lh-base mb-2">FCB Brasil</h4>
-                            <p class="text-white-50 fs-5 fw-normal lh-base">
-                                <small>Front-End Developer<br />
-                                <span class="small">2017 - 2016</span></small>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <h4 class="fw-bold lh-base mb-2">RAPP</h4>
-                            <p class="text-white-50 fs-5 fw-normal lh-base">
-                                <small>Front-End Developer<br />
-                                <span class="small">2016 - 2014</span></small>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <h4 class="fw-bold lh-base mb-2">One Digital</h4>
-                            <p class="text-white-50 fs-5 fw-normal lh-base">
-                                <small>Front-End Developer<br />
-                                <span class="small">2014 - 2012</span></small>
-                            </p>
-                        </div>
-                    </div>
-                </div>    
-            </div>
-
-            <div class="row mt-5 ps-0 ms-0 ps-lg-5 ms-lg-5">
-                <div class="col-lg-8 col-md-10 col-12">
-                    <h2 class="fw-bold lh-base mb-4">Social</h2>
-                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-                        <div class="col">
-                            <a href="mailto:sergio.cerillo@gmail.com" class="fs-4 border-bottom text-white text-decoration-none" target="_blank">E-mail <span class="small"><b class="small"><i class="bi bi-arrow-up-right small"></i></b></span></a>
-                        </div>
-                        <div class="col">
-                            <a href="https://www.linkedin.com/in/sergiocerillo/" class="fs-4 border-bottom text-white text-decoration-none" target="_blank">Linkedin <span class="small"><b class="small"><i class="bi bi-arrow-up-right small"></i></b></span></a>
-                        </div>
-                        <div class="col">
-                            <a href="https://sergiocerillo.medium.com/" class="fs-4 border-bottom text-white text-decoration-none" target="_blank">Medium <span class="small"><b class="small"><i class="bi bi-arrow-up-right small"></i></b></span></a>
-                        </div>
-                        <div class="col">
-                            <a href="https://www.behance.net/sergiocerillo" class="fs-4 border-bottom text-white text-decoration-none" target="_blank">Behance <span class="small"><b class="small"><i class="bi bi-arrow-up-right small"></i></b></span></a>
-                        </div>
-                        <div class="col">
-                            <a href="https://open.spotify.com/user/sergiocerillo" class="fs-4 border-bottom text-white text-decoration-none" target="_blank">Spotify <span class="small"><b class="small"><i class="bi bi-arrow-up-right small"></i></b></span></a>
-                        </div>
-                        <div class="col">
-                            <a href="https://github.com/sergiocerillo/" class="fs-4 border-bottom text-white text-decoration-none" target="_blank">GitHub <span class="small"><b class="small"><i class="bi bi-arrow-up-right small"></i></b></span></a>
-                        </div>
-                    </div>
-                </div>    
-            </div>
+          <div class="about__badges">
+            <span class="tag tag--design">Design</span>
+            <span class="about__badge-link">⇄</span>
+            <span class="tag tag--frontend">Código</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <p class="eyebrow reveal">// habilidades</p>
+      <h2 class="section__title reveal">Duas caixas de ferramentas.</h2>
+
+      <div class="skills__grid">
+        <div class="skill-file reveal skill-file--design">
+          <span class="skill-file__name">design.tools</span>
+          <ul class="skill-list">
+            <li>Figma</li>
+            <li>Adobe XD</li>
+            <li>Miro</li>
+            <li>Design Systems</li>
+            <li>Prototipação</li>
+            <li>Card Sorting</li>
+            <li>Benchmarking</li>
+          </ul>
+        </div>
+
+        <div class="skill-file reveal skill-file--frontend">
+          <span class="skill-file__name">frontend.tools</span>
+          <ul class="skill-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>jQuery</li>
+            <li>VTEX</li>
+            <li>WordPress</li>
+            <li>Git</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIÊNCIA ============ -->
+  <section class="section" id="experiencia">
+    <div class="container">
+      <p class="eyebrow reveal">// experiência</p>
+      <h2 class="section__title reveal">Trajetória.</h2>
+
+      <!--
+        TODO: se quiser, adicione 1 linha de destaque/resultado por cargo.
+        Basta inserir <p class="timeline__note">seu texto aqui</p> dentro do .timeline__content correspondente.
+      -->
+      <ol class="timeline">
+        <li class="timeline__item reveal" data-tag="design">
+          <span class="timeline__dot"></span>
+          <div class="timeline__content">
+            <div class="timeline__row"><h3>CIEE</h3><span class="timeline__years">2025 – 2026</span></div>
+            <span class="tag tag--design">UX/UI Design</span>
+          </div>
+        </li>
+        <li class="timeline__item reveal" data-tag="design">
+          <span class="timeline__dot"></span>
+          <div class="timeline__content">
+            <div class="timeline__row"><h3>MRM</h3><span class="timeline__years">2023 – 2024</span></div>
+            <span class="tag tag--design">UX/UI Design</span>
+          </div>
+        </li>
+        <li class="timeline__item reveal" data-tag="design">
+          <span class="timeline__dot"></span>
+          <div class="timeline__content">
+            <div class="timeline__row"><h3>ACCT Global</h3><span class="timeline__years">2022 – 2023</span></div>
+            <span class="tag tag--design">UX/UI Design</span>
+          </div>
+        </li>
+        <li class="timeline__item reveal" data-tag="design">
+          <span class="timeline__dot"></span>
+          <div class="timeline__content">
+            <div class="timeline__row"><h3>fri.to</h3><span class="timeline__years">2021 – 2022</span></div>
+            <span class="tag tag--design">UX/UI Design</span>
+          </div>
+        </li>
+        <li class="timeline__item reveal" data-tag="frontend">
+          <span class="timeline__dot"></span>
+          <div class="timeline__content">
+            <div class="timeline__row"><h3>McCann Health</h3><span class="timeline__years">2019 – 2020</span></div>
+            <span class="tag tag--frontend">Front-End Developer</span>
+          </div>
+        </li>
+        <li class="timeline__item reveal" data-tag="frontend">
+          <span class="timeline__dot"></span>
+          <div class="timeline__content">
+            <div class="timeline__row"><h3>apis3</h3><span class="timeline__years">2017 – 2019</span></div>
+            <span class="tag tag--frontend">Front-End Developer</span>
+          </div>
+        </li>
+        <li class="timeline__item reveal" data-tag="frontend">
+          <span class="timeline__dot"></span>
+          <div class="timeline__content">
+            <div class="timeline__row"><h3>FCB Brasil</h3><span class="timeline__years">2016 – 2017</span></div>
+            <span class="tag tag--frontend">Front-End Developer</span>
+          </div>
+        </li>
+        <li class="timeline__item reveal" data-tag="frontend">
+          <span class="timeline__dot"></span>
+          <div class="timeline__content">
+            <div class="timeline__row"><h3>RAPP</h3><span class="timeline__years">2014 – 2016</span></div>
+            <span class="tag tag--frontend">Front-End Developer</span>
+          </div>
+        </li>
+        <li class="timeline__item reveal" data-tag="frontend">
+          <span class="timeline__dot"></span>
+          <div class="timeline__content">
+            <div class="timeline__row"><h3>One Digital</h3><span class="timeline__years">2012 – 2014</span></div>
+            <span class="tag tag--frontend">Front-End Developer</span>
+          </div>
+        </li>
+      </ol>
+
+      <div class="education reveal">
+        <p class="eyebrow">// formação</p>
+        <h3 class="education__heading">Formação acadêmica</h3>
+
+        <ul class="education-list">
+          <li class="education-item">
+            <div class="education-item__head">
+              <h4>Bacharelado em Publicidade e Propaganda</h4>
+              <span class="education-item__years">2026 – 2029 <span class="badge-progress">cursando</span></span>
+            </div>
+            <p class="education-item__school">Centro Universitário FMU | FIAM-FAAM</p>
+          </li>
+
+          <li class="education-item">
+            <div class="education-item__head">
+              <h4>MBA em Product Management &amp; Digital Growth</h4>
+              <span class="education-item__years">2025 – 2026</span>
+            </div>
+            <p class="education-item__school">Impacta Tecnologia</p>
+          </li>
+
+          <li class="education-item">
+            <div class="education-item__head">
+              <h4>Pós-graduação Lato Sensu em Design Emocional</h4>
+              <span class="education-item__years">2022 – 2023</span>
+            </div>
+            <p class="education-item__school">Centro Universitário Belas Artes de São Paulo</p>
+          </li>
+
+          <li class="education-item">
+            <div class="education-item__head">
+              <h4>MBA em UX Design &amp; Digital Experience</h4>
+              <span class="education-item__years">2021</span>
+            </div>
+            <p class="education-item__school">Impacta Tecnologia</p>
+          </li>
+
+          <li class="education-item">
+            <div class="education-item__head">
+              <h4>Bacharelado em Análise e Desenvolvimento de Sistemas</h4>
+              <span class="education-item__years">2012 – 2014</span>
+            </div>
+            <p class="education-item__school">Universidade Paulista (UNIP)</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJETOS ============ -->
+  <section class="section section--alt" id="projetos">
+    <div class="container">
+      <p class="eyebrow reveal">// projetos</p>
+      <h2 class="section__title reveal">Alguns cases da estrada.</h2>
+      <p class="section__lead reveal">Uma seleção de projetos de UX/UI e front-end. Conto a história de alguns deles com mais detalhe.</p>
+
+      <div class="filter-bar reveal" role="group" aria-label="Filtrar projetos por categoria">
+        <button class="filter-btn is-active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="design">UX/UI</button>
+        <button class="filter-btn" data-filter="frontend">Front-End</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <article class="project-card reveal" data-category="design">
+          <a class="project-card__link" href="pan.html">
+            <div class="project-card__thumb thumb--1"><span>PAN</span></div>
+            <div class="project-card__body">
+              <span class="tag tag--design">UX/UI</span>
+              <h3>Banco PAN</h3>
+              <p>Do site ao app: da criação do Design System ao fluxo completo de navegação.</p>
+              <span class="project-card__cta">Ver case <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-category="design">
+          <a class="project-card__link" href="projeta.html">
+            <div class="project-card__thumb thumb--2"><span>ELE</span></div>
+            <div class="project-card__body">
+              <span class="tag tag--design">UX/UI</span>
+              <h3>Electrolux Projeta</h3>
+              <p>O projeto mais interessante da minha trajetória: pesquisa, card sorting e um blog interno que ganhou vida nova.</p>
+              <span class="project-card__cta">Ver case <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-category="frontend">
+          <a class="project-card__link" href="gati.html">
+            <div class="project-card__thumb thumb--3"><span>GATI</span></div>
+            <div class="project-card__body">
+              <span class="tag tag--frontend">Front-End</span>
+              <h3>Gati Consultoria</h3>
+              <p>Satisfazer o cliente é o objetivo — mesmo que custe algumas frustrações pelo caminho.</p>
+              <span class="project-card__cta">Ver case <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-category="frontend">
+          <a class="project-card__link" href="maua.html">
+            <div class="project-card__thumb thumb--4"><span>IMT</span></div>
+            <div class="project-card__body">
+              <span class="tag tag--frontend">Front-End</span>
+              <h3>Instituto Mauá de Tecnologia</h3>
+              <p>Mesmo que o layout mude, o conceito pode ser duradouro.</p>
+              <span class="project-card__cta">Ver case <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-category="frontend">
+          <a class="project-card__link" href="nova.html">
+            <div class="project-card__thumb thumb--5"><span>NOVA</span></div>
+            <div class="project-card__body">
+              <span class="tag tag--frontend">Front-End</span>
+              <h3>Nova Chevrolet</h3>
+              <p>O poder do HTML e CSS puro, sem uso de framework.</p>
+              <span class="project-card__cta">Ver case <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-category="frontend">
+          <a class="project-card__link" href="unica.html">
+            <div class="project-card__thumb thumb--6"><span>USE</span></div>
+            <div class="project-card__body">
+              <span class="tag tag--frontend">Front-End</span>
+              <h3>Use Única</h3>
+              <p>Um novo comportamento de label e input — mas no meu computador funciona 😄</p>
+              <span class="project-card__cta">Ver case <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card reveal" data-category="frontend">
+          <a class="project-card__link" href="norden.html">
+            <div class="project-card__thumb thumb--7"><span>NOR</span></div>
+            <div class="project-card__body">
+              <span class="tag tag--frontend">Front-End</span>
+              <h3>Norden</h3>
+              <p>Uma comunicação ótima entre designers e programadores.</p>
+              <span class="project-card__cta">Ver case <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+
+      <p class="filter-empty" id="filterEmpty" hidden>Nenhum projeto nessa categoria ainda.</p>
+    </div>
+  </section>
+
+  <!-- ============ ESCRITA ============ -->
+  <section class="section" id="escrita">
+    <div class="container">
+      <p class="eyebrow reveal">// escrita</p>
+      <h2 class="section__title reveal">Também escrevo sobre UX.</h2>
+
+      <ul class="writing-list">
+        <li class="reveal">
+          <a href="https://sergiocerillo.medium.com/como-o-reduzir-os-danos-causados-por-jogos-de-azar-e-apostas-893775deefa0" target="_blank" rel="noopener noreferrer">
+            <span class="writing-list__title">Como reduzir os danos causados por jogos de azar e apostas</span>
+            <span class="writing-list__meta">TCC de pós-graduação · Medium <span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="https://sergiocerillo.medium.com/o-iphone-em-nossas-vidas-317bc86de4fe" target="_blank" rel="noopener noreferrer">
+            <span class="writing-list__title">O iPhone em nossas vidas</span>
+            <span class="writing-list__meta">Medium <span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="https://sergiocerillo.medium.com/o-que-%C3%A9-ux-e-qual-sua-proposta-para-produtos-como-aplicar-em-seu-dia-a-dia-8b2c06724db2" target="_blank" rel="noopener noreferrer">
+            <span class="writing-list__title">O que é UX e qual sua proposta para produtos?</span>
+            <span class="writing-list__meta">Medium <span aria-hidden="true">→</span></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section class="section section--contact" id="contato">
+    <div class="container contact__inner">
+      <p class="eyebrow reveal">// contato</p>
+      <h2 class="contact__title reveal">Vamos conversar?</h2>
+      <p class="contact__lead reveal">Aberto a novos projetos, parcerias e boas conversas sobre design e código.</p>
+
+      <div class="contact__actions reveal">
+        <a class="btn btn--primary" href="https://wa.link/r7tgu2" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+        <button class="btn btn--ghost" id="copyEmailBtn" data-email="sergio.cerillo@gmail.com">
+          <span id="copyEmailLabel">sergio.cerillo@gmail.com</span>
+        </button>
+      </div>
+
+      <ul class="social-row reveal">
+        <li><a href="https://www.linkedin.com/in/sergiocerillo/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Sérgio Cerillo">in</a></li>
+        <li><a href="https://github.com/sergiocerillo/" target="_blank" rel="noopener noreferrer" aria-label="GitHub de Sérgio Cerillo">gh</a></li>
+        <li><a href="https://www.behance.net/sergiocerillo" target="_blank" rel="noopener noreferrer" aria-label="Behance de Sérgio Cerillo">be</a></li>
+        <li><a href="https://sergiocerillo.medium.com/" target="_blank" rel="noopener noreferrer" aria-label="Medium de Sérgio Cerillo">md</a></li>
+        <li><a href="https://open.spotify.com/user/sergiocerillo" target="_blank" rel="noopener noreferrer" aria-label="Spotify de Sérgio Cerillo">sp</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© <span id="year"></span> Sérgio Cerillo — feito com HTML, CSS e um pouco de JS, sem frameworks.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" hidden>↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,167 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Instituto Mauá de Tecnologia — Sérgio Cerillo</title>
+<meta name="description" content="Case de front-end e UX: uma página única e mobile first para apresentar dezenas de cursos de pós-graduação da Faculdade Mauá.">
+<meta name="theme-color" content="#14161B">
 
-    <link rel="stylesheet" href="main.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Instituto Mauá de Tecnologia — Sérgio Cerillo">
+<meta property="og:description" content="Case de front-end e UX: uma página única e mobile first para apresentar dezenas de cursos de pós-graduação da Faculdade Mauá.">
+<meta property="og:url" content="https://sergiocerillo.github.io/portfolio/maua.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    
-    <title>Sérgio Cerillo - Design UX/Front-End</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314161B'/%3E%3Ctext x='50' y='64' font-family='monospace' font-weight='700' font-size='40' fill='%23E8B34A' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="p-4 w-100 sticky-lg-top">
-        <div class="container-fluid">
-            <div class="row justify-content-around align-items-center">
-                <div class="col">
-                    <h2>
-                        <a href="index.html" class="">
-                            <img src="imgs/logo.svg" alt="" class="d-block mx-auto mx-md-0 mb-4 mb-md-0">
-                        </a>
-                    </h2>
-                </div>
-                
-                <div class="col-xl-2 col-lg-3 col-md-6 col-12">
-                    <nav class="d-flex justify-content-around">
-                        <a href="projects.html" class="text-white-50 text-decoration-none fs-5 fw-normal">Projetos</a>
-                        <a href="https://wa.link/r7tgu2" class="text-white-50 text-decoration-none fs-5 fw-normal">Contato</a>
-                    </nav>
-                </div>
-            </div>
+<div class="progress-bar" id="progressBar"></div>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container" aria-label="Navegação principal">
+    <a href="index.html" class="nav__brand">SC<span class="nav__brand-dot">.</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#skills">Habilidades</a></li>
+      <li><a href="index.html#experiencia">Experiência</a></li>
+      <li><a href="index.html#projetos">Projetos</a></li>
+      <li><a href="index.html#escrita">Escrita</a></li>
+      <li><a href="index.html#contato" class="nav__cta">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <section class="case-hero">
+    <div class="container">
+      <a class="case-back reveal" href="index.html#projetos">← Voltar aos projetos</a>
+
+      <span class="tag tag--frontend reveal">Front-End</span>
+      <h1 class="case-hero__title reveal">Instituto Mauá de Tecnologia</h1>
+      <p class="case-hero__hook reveal">Mostrar dezenas de cursos de pós-graduação em uma única tela, sem perder clareza — e sem abrir mão do mobile first.</p>
+
+      <dl class="case-meta reveal">
+          <div><dt>Cliente</dt><dd>Instituto Mauá de Tecnologia</dd></div>
+          <div><dt>Papel</dt><dd>Front-End e UX</dd></div>
+          <div><dt>Ano</dt><dd>2018</dd></div>
+          <div><dt>Ferramentas</dt><dd>HTML · CSS (Flexbox) · Wireframes</dd></div>
+      </dl>
+
+      <div class="case-hero__art reveal art--maua"><span>IMT</span></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="case-body">
+
+        <p class="case-intro">
+          Durante 2018, atuei como front-end e fui responsável não só pela implementação técnica, mas também pelo
+          desenho de wireframes, fluxos de navegação e soluções de usabilidade em diversos projetos. Um dos
+          principais clientes foi a <strong>Faculdade Mauá</strong>, que precisava de uma nova plataforma para
+          apresentar seus cursos de MBA e pós-graduação de forma clara e eficiente.
+        </p>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">01</span><h2>Descoberta e pesquisa</h2></div>
+          <div class="case-step__content">
+            <p>O cliente tinha uma demanda clara: mostrar todos os cursos disponíveis já na primeira página. Para
+            entender melhor o mercado, fiz um benchmarking com concorrentes nacionais e logo percebi que a maioria
+            separava os cursos por tags ou áreas, mas distribuía as informações em diversas páginas — algo que não
+            atenderia ao requisito do cliente de manter tudo em uma única tela.</p>
+          </div>
         </div>
-    </header>
 
-    
-
-    <section class="py-3 my-4">
-        <div class="container">
-            <div class="row ps-0 ms-0 ps-lg-5 ms-lg-5">
-                <div class="col-lg-8 col-md-10 col-12">
-                    
-                    
-                    <a href="projects.html" class="button-sm fulled mb-5 d-flex align-items-center">
-                        <i class="bi bi-arrow-left-short"></i>
-                        Voltar
-                    </a>
-
-                    <h1 class="display-4 fw-bold">
-                        Electrolux Projeta
-                    </h1>
-                    <div class="my-4">
-                        
-                    </div>
-                </div>   
-
-                <div class="col-lg-8 col-12">
-
-    <div class="my-4">
-        <h2 class="fw-bold">Contexto</h2>
-        <p class="lh-lg fs-5">
-            Durante 2018, atuei como Front-End e fui responsável não só pela implementação técnica, mas também pelo desenho de wireframes, fluxos de navegação e soluções de usabilidade em diversos projetos. 
-            Um dos principais clientes foi a Faculdade Mauá, que precisava desenvolver uma nova plataforma para apresentar seus cursos de MBA e Pós-Graduação de forma clara e eficiente.
-        </p>
-    </div>
-
-    <hr class="my-4">
-
-    <div class="mb-5">
-        <h3 class="fw-bold mb-4">1. Descoberta e Pesquisa</h3>
-        <p class="lh-lg fs-5 mb-3">
-            O cliente tinha uma demanda clara: mostrar todos os cursos disponíveis já na primeira página. Para entender melhor o mercado e as possíveis soluções, realizei uma análise de benchmarking focada inicialmente em concorrentes nacionais. 
-            Logo percebi que a maioria separava os cursos por tags ou áreas, mas distribuía as informações em diversas páginas — algo que não atenderia ao requisito do cliente de manter tudo em uma única tela.
-        </p>
-    </div>
-
-    <div class="mb-5">
-        <h3 class="fw-bold mb-4">2. Colaboração e Ideação</h3>
-        <p class="lh-lg fs-5 mb-3">
-            Considerando a forte tendência do mobile first na época, ajustamos o foco para pesquisar plataformas internacionais, onde o conceito já estava mais avançado. 
-            Nessa etapa, envolvi designers e outros membros da equipe para troca de ideias e referências, o que enriqueceu o processo criativo. Encontramos uma faculdade estrangeira que apresentava seus cursos em cards com rolagem lateral, um formato intuitivo e que se encaixava bem em dispositivos móveis.
-        </p>
-        <p class="lh-lg fs-5 mb-3">
-            Ao mesmo tempo, precisei definir como categorizar os cursos. Observei que o uso de cores estava ligado não só à identidade visual, mas podia ser aproveitado para segmentar as áreas dos cursos. 
-            Conversei com o designer responsável e decidimos utilizar uma paleta de cores para quatro categorias principais: Engenharia, Design, Tecnologia da Informação e Gestão — reforçando o reconhecimento e facilitando a navegação visual do usuário.
-        </p>
-    </div>
-
-    <div class="mb-5">
-        <h3 class="fw-bold mb-4">3. Prototipação e Design</h3>
-        <p class="lh-lg fs-5 mb-3">
-            Com os insights coletados, desenvolvi wireframes focados em uma única página, com cards que apresentavam o nome do curso, data de início e o destaque da categoria por cor. 
-            O layout priorizou a clareza e usabilidade, especialmente para telas pequenas, garantindo uma navegação fluida e agradável no mobile. 
-            Essa estrutura também possibilitou uma rolagem lateral, economizando espaço vertical e mantendo o foco do usuário.
-        </p>
-    </div>
-
-    <div class="mb-5">
-        <h3 class="fw-bold mb-4">4. Desenvolvimento Front-End</h3>
-        <p class="lh-lg fs-5 mb-3">
-            Na fase de implementação, utilizei técnicas modernas para garantir performance e responsividade. O componente de card foi desenvolvido para ser leve e reutilizável, usando HTML semântico e CSS flexbox para o layout horizontal adaptável. 
-            A rolagem lateral foi otimizada para touch, garantindo fluidez no mobile. Também garanti acessibilidade básica, como foco visível para navegação via teclado e contraste adequado nas cores dos segmentos.
-        </p>
-    </div>
-
-    <div class="mb-5">
-        <h3 class="fw-bold mb-4">5. Validação e Resultados</h3>
-        <p class="lh-lg fs-5 mb-0">
-            A solução foi apresentada ao cliente e aprovada imediatamente, resultado da combinação de pesquisa, colaboração e implementação técnica cuidadosa. 
-            Após o lançamento, observamos um aumento significativo na taxa de conversão de visitantes para interessados e inscritos nos programas de pós-graduação. 
-            Usuários destacaram a facilidade na navegação, a clareza das informações e o processo simplificado de inscrição, comprovando o sucesso da abordagem mobile first e da categorização visual.
-        </p>
-    </div>
-
-</div>
-
-
-                <!-- <div class="col-lg-8 col-12">
-                    <p class="lh-lg fs-5">
-                        Durante o ano de 2018, trabalhei como Front-End e fui responsável por desenhar wireframes, fluxos de navegação e encontrar soluções de usabilidade para vários projetos. Um dos principais clientes foi a Faculdade Maua, que propôs o desenvolvimento de uma nova plataforma para indicar seus principais cursos de MBA e Pós-Graduação.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Um requisito essencial do cliente era apresentar todos os cursos na primeira página. Com base nessa informação, iniciei o projeto. Primeiramente, conduzi uma análise de benchmarking e pesquisas para entender como os concorrentes lidavam com seus cursos. Rapidamente notei que eles separavam os cursos por tags ou áreas principais, mas cada curso tinha várias páginas. O desafio era criar tudo em uma única página.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Durante o processo, gosto de conversar com todos os membros da equipe envolvidos no projeto, especialmente os designers. Trocar ideias e referências sempre é bem-vindo em processos criativos. Com o conceito de mobile first em ascensão na época, decidimos voltar um pouco atrás e focar no benchmarking exclusivamente para dispositivos móveis, inclusive em faculdades estrangeiras. Essa abordagem, já consolidada em outros países, poderia nos ajudar.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Eventualmente, encontramos uma faculdade estrangeira que exibia seus cursos em cards com rolagem lateral. Decidimos seguir essa ideia, mas ainda precisávamos descobrir como separar as áreas relacionadas aos cursos. Ao navegar por outros sites de faculdades, observei que as cores não estavam limitadas ao logotipo. Então, tive a ideia de usar algumas dessas cores. Após conversar com o designer responsável, decidimos prosseguir com as cores disponíveis.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Na apresentação do projeto para o cliente, ele foi aprovado imediatamente. Conseguimos resolver a questão apresentada de forma eficiente, leve e rápida.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Embora o layout do site tenha mudado atualmente, o conceito apresentado na época ainda está vivo. No card, incluímos:
-                        <ol>
-                            <li>Nome do curso</li>
-                            <li>Data de início do curso</li>
-                            <li>Quatro categorias de cursos com cores diferentes para cada segmento (Engenharia, Design, Tecnologia da Informação e Gestão)</li>
-                        </ol>
-                    </p>
-    
-                    <p class="lh-lg fs-5">                        
-                        O resultado foi:
-                        <ul>
-                            <li>Aumento na taxa de conversão de visitantes para interessados e inscritos em programas de pós-graduação.</li>
-                            <li>Feedback positivo dos usuários, destacando a facilidade de navegação, clareza nas informações e processo simplificado de inscrição.</li>
-                        </ul>                        
-                    </p>
-                    
-                    <a href="https://maua.br/pos-graduacao" target="_blank" class="button fulled mt-5 d-flex align-items-center">
-                        Conheça o projeto 
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-                </div>  -->
-            </div>
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">02</span><h2>Colaboração e ideação</h2></div>
+          <div class="case-step__content">
+            <p>Considerando a forte tendência do mobile first na época, ajustei o foco para pesquisar plataformas
+            internacionais, onde o conceito já estava mais avançado. Envolvi outros designers da equipe na troca de
+            ideias, o que enriqueceu o processo criativo — e encontramos uma faculdade estrangeira que apresentava
+            seus cursos em cards com rolagem lateral, um formato intuitivo para dispositivos móveis.</p>
+            <p>Ao mesmo tempo, precisei definir como categorizar os cursos. Percebi que a cor podia ir além da
+            identidade visual e ser usada para segmentar as áreas. Junto com o designer responsável, decidimos usar
+            uma paleta para quatro categorias: Engenharia, Design, Tecnologia da Informação e Gestão — reforçando o
+            reconhecimento visual e facilitando a navegação.</p>
+          </div>
         </div>
-    </section>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">03</span><h2>Prototipação e design</h2></div>
+          <div class="case-step__content">
+            <p>Com os insights coletados, desenvolvi wireframes para uma única página, com cards apresentando nome
+            do curso, data de início e o destaque da categoria por cor. O layout priorizou clareza e usabilidade,
+            especialmente em telas pequenas — a rolagem lateral economizava espaço vertical e mantinha o foco do
+            usuário.</p>
+          </div>
+        </div>
+
+        <div class="case-image">
+          <span class="case-image__icon">▢</span>
+          <p><!-- TODO: troque por uma imagem real do projeto --> espaço reservado para print do carrossel de cursos</p>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">04</span><h2>Desenvolvimento front-end</h2></div>
+          <div class="case-step__content">
+            <p>Na implementação, usei técnicas modernas para garantir performance e responsividade. O componente de
+            card foi construído para ser leve e reutilizável, com HTML semântico e CSS flexbox para o layout
+            horizontal adaptável. A rolagem lateral foi otimizada para touch, e garanti acessibilidade básica —
+            foco visível na navegação por teclado e contraste adequado nas cores dos segmentos.</p>
+          </div>
+        </div>
+
+        <div class="case-result">
+          <h2>Validação e resultados</h2>
+          <p>A solução foi apresentada ao cliente e aprovada imediatamente — resultado da combinação de pesquisa,
+          colaboração e implementação técnica cuidadosa.</p>
+          <p>Após o lançamento, observamos um <strong>aumento significativo na taxa de conversão</strong> de
+          visitantes para interessados e inscritos nos programas de pós-graduação. Usuários destacaram a facilidade
+          de navegação, a clareza das informações e o processo simplificado de inscrição.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="case-nav">
+    <div class="container case-nav__grid">
+      <a class="case-nav__link case-nav__link--prev" href="projeta.html">
+        <span class="case-nav__label">← Anterior</span>
+        <span class="case-nav__title">Electrolux Projeta</span>
+      </a>
+      <a class="case-nav__link case-nav__link--next" href="unica.html">
+        <span class="case-nav__label">Próximo →</span>
+        <span class="case-nav__title">Use Única</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© <span id="year"></span> Sérgio Cerillo — feito com HTML, CSS e um pouco de JS, sem frameworks.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" hidden>↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

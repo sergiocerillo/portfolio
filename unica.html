@@ -1,105 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Use Única — Sérgio Cerillo</title>
+<meta name="description" content="Case de front-end: trazendo o comportamento de label e input do Material Design para dentro do WordPress, usando Contact Form 7 e CSS puro.">
+<meta name="theme-color" content="#14161B">
 
-    <link rel="stylesheet" href="main.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Use Única — Sérgio Cerillo">
+<meta property="og:description" content="Case de front-end: trazendo o comportamento de label e input do Material Design para dentro do WordPress, usando Contact Form 7 e CSS puro.">
+<meta property="og:url" content="https://sergiocerillo.github.io/portfolio/unica.html">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    
-    <title>Sérgio Cerillo - Design UX/Front-End</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2314161B'/%3E%3Ctext x='50' y='64' font-family='monospace' font-weight='700' font-size='40' fill='%23E8B34A' text-anchor='middle'%3ESC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="p-4 w-100 sticky-lg-top">
-        <div class="container-fluid">
-            <div class="row justify-content-around align-items-center">
-                <div class="col">
-                    <h2>
-                        <a href="index.html" class="">
-                            <img src="imgs/logo.svg" alt="" class="d-block mx-auto mx-md-0 mb-4 mb-md-0">
-                        </a>
-                    </h2>
-                </div>
-                
-                <div class="col-xl-2 col-lg-3 col-md-6 col-12">
-                    <nav class="d-flex justify-content-around">
-                        <a href="projects.html" class="text-white-50 text-decoration-none fs-5 fw-normal">Projetos</a>
-                        <a href="https://wa.link/r7tgu2" class="text-white-50 text-decoration-none fs-5 fw-normal">Contato</a>
-                    </nav>
-                </div>
-            </div>
+<div class="progress-bar" id="progressBar"></div>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container" aria-label="Navegação principal">
+    <a href="index.html" class="nav__brand">SC<span class="nav__brand-dot">.</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#skills">Habilidades</a></li>
+      <li><a href="index.html#experiencia">Experiência</a></li>
+      <li><a href="index.html#projetos">Projetos</a></li>
+      <li><a href="index.html#escrita">Escrita</a></li>
+      <li><a href="index.html#contato" class="nav__cta">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <section class="case-hero">
+    <div class="container">
+      <a class="case-back reveal" href="index.html#projetos">← Voltar aos projetos</a>
+
+      <span class="tag tag--frontend reveal">Front-End</span>
+      <h1 class="case-hero__title reveal">Use Única</h1>
+      <p class="case-hero__hook reveal">Trazer o comportamento de label e input do Material Design para dentro do WordPress — no Contact Form 7. Um desafio pequeno, mas gostoso.</p>
+
+      <dl class="case-meta reveal">
+          <div><dt>Cliente</dt><dd>Use Única</dd></div>
+          <div><dt>Papel</dt><dd>Front-End</dd></div>
+          <div><dt>Ferramentas</dt><dd>WordPress · Contact Form 7 · jQuery · CSS</dd></div>
+          <div><dt>Link</dt><dd><a href="https://useunica.com.br/" target="_blank" rel="noopener noreferrer">useunica.com.br ↗</a></dd></div>
+      </dl>
+
+      <div class="case-hero__art reveal art--unica"><span>USE</span></div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="case-body">
+
+        <p class="case-intro">
+          Use Única é uma empresa que atua na área de máquinas de pagamento. Foi um projeto rápido e tranquilo de
+          desenvolver — mas guardo um carinho especial pelo desafio técnico que ele escondia.
+        </p>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">01</span><h2>O desafio de UX</h2></div>
+          <div class="case-step__content">
+            <p>Na época, o Material Design do Google estava em ascensão, e decidimos trazer para o layout uma forma
+            de comportamento de label e input inspirada nele — o rótulo migra para cima assim que o campo recebe
+            foco ou conteúdo, mantendo o formulário limpo sem perder contexto.</p>
+          </div>
         </div>
-    </header>
 
-    
-
-    <section class="py-3 my-4">
-        <div class="container">
-            <div class="row ps-0 ms-0 ps-lg-5 ms-lg-5">
-                <div class="col-lg-8 col-md-10 col-12">
-                    
-                    
-                    <a href="projects.html" class="button-sm fulled mb-5 d-flex align-items-center">
-                        <i class="bi bi-arrow-left-short"></i>
-                        Voltar
-                    </a>
-
-                    <h1 class="display-4 fw-bold">
-                        Use Unica
-                    </h1>
-                    <blockquote class="my-4">
-                        Não tenho muito o que comentar sobre esse projeto, pois desenvolvi rapidamente de forma tranquila
-                    </blockquote>
-                </div>   
-                <div class="col-lg-8 col-12">
-                    <p class="lh-lg fs-5">
-                        Unica é basicamente um cliente que atua na area de maquinas de pagamento.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Um caso bacana do site foi que na epoca decidimos trazer para o layout uma forma nova de comportamento de label e input.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Na epoca o Material Design do Google estava crescendo muito e resolvemos manter a forma que ele funciona.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Mas o desafio ficou por conta de fazer a ideia funcionar no Contact Forms 7 no Wordpress. Desafio que pessoalmente dizendo eu adoro, se tratando de CSS. Tenho como ideia sempre que possivel usar o maximo de CSS possivel, hoje o CSS nos possibilidade muita coisa nova, coisa que a anos atras nem era imaginado. Porem o jQuery sempre foi um camarada que andou comigo, tenho um carinho enorme por essa linguagem de JavaScript. Facil de entender e programar. E sempre usei muito ela para adicionar e remover classes, aumenta muito mais as possibilidades de interações.
-                    </p>
-
-                    <blockquote class="my-4">
-                        🗣 Mas aahh, Sérgio e os navegadores antigos?<br>
-                        💁🏼 Otima questão camarada
-                    </blockquote>
-    
-                    <p class="lh-lg fs-5">
-                        Como por um bom tempo eu fui responsavel por disparo de EMKT (Emails Marketing), além de fazer o QA (Teste) da mesma, sempre tive que ficar atento em navegadores antigos, em sua maioria por conta do cliente.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Porque se olharmos na epoca quase 2% das bases usavam navegadores antigos. Antigos mesmo, Internet Explorer, 8, 7, 6 e a quem diga que ja viu o 5 na base.
-                    </p>
-
-                    <blockquote class="my-4">
-                        O meme : Internet Explorer é o navegador mais usado para baixar outros navegadores nunca fui tão real.
-                    </blockquote>
-    
-                    <p class="lh-lg fs-5">
-                        Por conta desses numeros sempre fui suscetível a fazer o que é melhor e mais atual. Mas se isso me custasse um layout de ponta cabeça, era melhor voltar umas casinhas para tras e repensar. Mas nunca aconteceu.
-                    </p>
-                    
-                    <a href="https://useunica.com.br/" target="_blank" class="button fulled mt-5 d-flex align-items-center">
-                        Conheça o projeto 
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-                </div> 
-            </div>
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">02</span><h2>A solução técnica</h2></div>
+          <div class="case-step__content">
+            <p>O desafio ficou por conta de fazer a ideia funcionar dentro do <strong>Contact Form 7</strong>, no
+            WordPress — um desafio que, sendo sincero, adoro quando envolve CSS. Tento sempre usar o máximo de CSS
+            possível: hoje ele permite muito mais do que anos atrás. Mas o jQuery sempre foi um parceiro de longa
+            data — fácil de entender, fácil de programar, e ótimo para adicionar e remover classes, ampliando as
+            possibilidades de interação.</p>
+          </div>
         </div>
-    </section>
+
+        <div class="dialogue">
+          <p class="q">🗣️ Mas e os navegadores antigos, Sérgio?</p>
+          <p class="a">💁🏼 Ótima pergunta.</p>
+          <p>Por um bom tempo fui responsável pelo disparo de EMKT e pelo QA em navegadores antigos — Internet
+          Explorer 8, 7, 6 — porque o cliente exigia. Mas como a fatia de usuários nesses navegadores era mínima,
+          eu sempre priorizava a solução mais atual. Nunca precisei comprometer um layout por causa disso.</p>
+        </div>
+
+        <div class="case-image">
+          <span class="case-image__icon">▢</span>
+          <p><!-- TODO: troque por uma imagem real do projeto --> espaço reservado para print do formulário</p>
+        </div>
+
+        <div class="case-result">
+          <h2>Considerações finais</h2>
+          <p>Não foi o projeto mais desafiador da minha trajetória, mas resume bem algo que gosto: resolver
+          problemas de interface com o mínimo de dependências possível — e sim, funcionou no meu computador 😄</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="case-nav">
+    <div class="container case-nav__grid">
+      <a class="case-nav__link case-nav__link--prev" href="maua.html">
+        <span class="case-nav__label">← Anterior</span>
+        <span class="case-nav__title">Instituto Mauá de Tecnologia</span>
+      </a>
+      <a class="case-nav__link case-nav__link--next" href="norden.html">
+        <span class="case-nav__label">Próximo →</span>
+        <span class="case-nav__title">Norden SA</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© <span id="year"></span> Sérgio Cerillo — feito com HTML, CSS e um pouco de JS, sem frameworks.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" hidden>↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
