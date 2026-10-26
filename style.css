@@ -367,12 +367,12 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 ========================================================= */
 .about__grid {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 260px 1fr;
   gap: 3rem;
   align-items: start;
 }
 .about__portrait {
-  width: 180px; height: 180px;
+  width: 260px; height: 260px;
   border-radius: var(--radius-m);
   background: linear-gradient(160deg, var(--bg-card), var(--bg-alt));
   display: flex; align-items: center; justify-content: center;
