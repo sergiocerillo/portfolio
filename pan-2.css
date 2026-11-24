@@ -1,16 +1,16 @@
 :root {
-  --pan-blue: #08a8ed;
-  --pan-deep: #09131f;
-  --pan-ink: #14202b;
-  --pan-muted: #65717d;
-  --pan-line: #dce5eb;
-  --pan-surface: #f5f8fa;
+  --pan-blue: #4ECDA0;
+  --pan-deep: #14161B;
+  --pan-ink: #ECE8DE;
+  --pan-muted: #ABA9A0;
+  --pan-line: rgba(236, 232, 222, .12);
+  --pan-surface: #191C22;
   --pan-display: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --pan-serif: 'Fraunces', Georgia, serif;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--pan-ink); background: #fff; font-family: var(--pan-display); line-height: 1.6; }
+body { margin: 0; color: var(--pan-ink); background: var(--pan-deep); font-family: var(--pan-display); line-height: 1.6; }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 .pan2-shell { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
@@ -38,13 +38,13 @@ a { color: inherit; text-decoration: none; }
 .pan2-intro { max-width: 780px; margin-bottom: 3rem; }
 .pan2-intro p { font-size: clamp(1.2rem, 2vw, 1.55rem); color: var(--pan-ink); }
 .pan2-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 2rem 0 0; padding: 0; list-style: none; }
-.pan2-list li { padding: 1.2rem; border: 1px solid var(--pan-line); border-radius: 1rem; background: #fff; font-weight: 700; }
+.pan2-list li { padding: 1.2rem; border: 1px solid var(--pan-line); border-radius: 1rem; background: var(--pan-surface); font-weight: 700; }
 .pan2-list li::before { content: '→'; color: var(--pan-blue); margin-right: .6rem; }
 .pan2-visual { margin: 3rem auto 0; max-width: 680px; }
 .pan2-visual img { width: 100%; border-radius: 1.3rem; box-shadow: 0 24px 60px rgba(9,19,31,.16); }
 .pan2-caption { margin-top: .7rem; color: var(--pan-muted); font-size: .78rem; }
 .pan2-work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2.5rem; }
-.pan2-work article { padding: 1.6rem; border: 1px solid var(--pan-line); border-radius: 1.2rem; background: #fff; }
+.pan2-work article { padding: 1.6rem; border: 1px solid var(--pan-line); border-radius: 1.2rem; background: var(--pan-surface); }
 .pan2-work__number { color: var(--pan-blue); font-weight: 800; }
 .pan2-work h3 { margin: .8rem 0 .5rem; font-size: 1.2rem; }
 .pan2-work p { margin: 0; font-size: .95rem; }
@@ -53,7 +53,7 @@ a { color: inherit; text-decoration: none; }
 .pan2-gallery img { width: auto; max-width: 100%; height: auto; margin: 0 auto; border-radius: .95rem; }
 .pan2-gallery figcaption { padding: .7rem .3rem .2rem; color: #a9b7c1; font-size: .76rem; }
 .pan2-results { display: grid; grid-template-columns: repeat(5, 1fr); gap: .8rem; margin-top: 2.5rem; }
-.pan2-result { padding: 1.2rem; border-top: 3px solid var(--pan-blue); background: #fff; }
+.pan2-result { padding: 1.2rem; border-top: 3px solid var(--pan-blue); background: var(--pan-surface); }
 .pan2-result strong { display: block; margin-bottom: .4rem; }
 .pan2-result span { color: var(--pan-muted); font-size: .85rem; }
 .pan2-quote { padding: 5rem 0; background: var(--pan-blue); color: #fff; }
@@ -74,8 +74,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* Apply the V2 visual language to the original case URLs. */
-.case-v2 { background: #fff; color: var(--pan-ink); }
-.case-v2 .nav-wrap { background: #fff; border-bottom-color: var(--pan-line); }
+.case-v2 { background: var(--pan-deep); color: var(--pan-ink); }
+.case-v2 .nav-wrap { background: rgba(20, 22, 27, .92); border-bottom-color: var(--pan-line); }
 .case-v2 .nav { max-width: 1180px; }
 .case-v2 .nav__brand { color: var(--pan-ink); }
 .case-v2 .nav__menu a { color: var(--pan-muted); }
