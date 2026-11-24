@@ -1034,6 +1034,35 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   margin-top: 1.2rem;
   margin-bottom: 3.5rem;
 }
+.case-gallery--inline {
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+.case-media-inline {
+  max-width: 380px;
+  margin: 2.2rem auto 3.6rem;
+}
+.case-media-inline img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  background: var(--bg-card);
+}
+.case-media-inline figcaption {
+  margin-top: .7rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  line-height: 1.45;
+}
+.case-media-inline--wide {
+  max-width: 700px;
+}
+.case-motion--inline {
+  margin: 2.5rem 0 3.8rem;
+}
 .case-gallery--optional {
   display: none;
   margin-top: 2.5rem;
