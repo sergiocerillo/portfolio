@@ -21,11 +21,10 @@ portfolio/
 ├── script.js          # Interatividade
 ├── sitemap.xml        # Sitemap para SEO
 ├── robots.txt         # Instruções para crawlers
-├── .htaccess          # Configurações Apache
 └── imgs/              # Imagens e assets
     ├── favicon.ico
     ├── logo.svg
-    ├── og-image.jpg   # 1200x630px para Open Graph
+    ├── og-image.svg   # Imagem para Open Graph
     └── projects/      # Screenshots dos projetos
 ```
 
@@ -80,4 +79,4 @@ https://sergiocerillo.github.io/portfolio/
 
 ---
 
-**Nota:** Para melhor SEO, substitua o placeholder `imgs/og-image.jpg` por uma imagem real de 1200x630px.
+O projeto usa `imgs/og-image.svg` como imagem de compartilhamento.

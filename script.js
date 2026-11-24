@@ -13,10 +13,6 @@
   });
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const raf = window.requestAnimationFrame
-    ? window.requestAnimationFrame.bind(window)
-    : (cb) => setTimeout(() => cb(Date.now()), 16);
-
   /* ---------------------------------------------
      Referências do DOM (todas no topo, para nunca
      haver uso de uma variável antes dela existir)
@@ -74,15 +70,25 @@
   window.addEventListener('scroll', onScroll, { passive: true });
 
   if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      const isOpen = navMenu.classList.toggle('is-open');
+    const setMenuState = (isOpen) => {
+      navMenu.classList.toggle('is-open', isOpen);
       navToggle.setAttribute('aria-expanded', String(isOpen));
+      navToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    };
+
+    navToggle.addEventListener('click', () => {
+      setMenuState(!navMenu.classList.contains('is-open'));
     });
     navMenu.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
+        setMenuState(false);
       });
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navMenu.classList.contains('is-open')) {
+        setMenuState(false);
+        navToggle.focus();
+      }
     });
   }
 
@@ -186,8 +192,12 @@
   --------------------------------------------- */
   filterButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
-      filterButtons.forEach((b) => b.classList.remove('is-active'));
+      filterButtons.forEach((b) => {
+        b.classList.remove('is-active');
+        b.setAttribute('aria-pressed', 'false');
+      });
       btn.classList.add('is-active');
+      btn.setAttribute('aria-pressed', 'true');
 
       const filter = btn.dataset.filter;
       let visibleCount = 0;

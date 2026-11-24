@@ -11,7 +11,7 @@
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#14161B">
 <link rel="canonical" href="https://sergiocerillo.github.io/portfolio/">
-<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -20,16 +20,15 @@
 <meta property="og:url" content="https://sergiocerillo.github.io/portfolio/">
 <meta property="og:site_name" content="Sérgio Cerillo Portfolio">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://sergiocerillo.github.io/portfolio/imgs/og-image.jpg">
+<meta property="og:image" content="https://sergiocerillo.github.io/portfolio/imgs/og-image.svg">
 <meta property="og:image:alt" content="Sérgio Cerillo - UX/UI Designer e Front-End Developer">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sérgio Cerillo — UX/UI Design e Front-End Developer">
 <meta name="twitter:description" content="Mais de 10 anos criando experiências digitais que unem design e código.">
-<meta name="twitter:image" content="https://sergiocerillo.github.io/portfolio/imgs/og-image.jpg">
+<meta name="twitter:image" content="https://sergiocerillo.github.io/portfolio/imgs/og-image.svg">
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,6 +101,7 @@
       <li><a href="#skills">Habilidades</a></li>
       <li><a href="#experiencia">Experiência</a></li>
       <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#escrita">Escrita</a></li>
       <li><a href="#contato" class="nav__cta">Contato</a></li>
     </ul>
   </nav>
@@ -252,28 +252,28 @@
           <span class="timeline__dot"></span>
           <div class="timeline__content">
             <div class="timeline__row"><h3>CIEE</h3><span class="timeline__years">2025 – 2026</span></div>
-            <span class="tag tag--design">Product Design Senior</span>
+            <span class="tag tag--design">Product Design Sr</span>
           </div>
         </li>
         <li class="timeline__item reveal" data-tag="design">
           <span class="timeline__dot"></span>
           <div class="timeline__content">
             <div class="timeline__row"><h3>MRM</h3><span class="timeline__years">2023 – 2024</span></div>
-            <span class="tag tag--design">UX Designer Senior</span>
+            <span class="tag tag--design">UX Designer Sr</span>
           </div>
         </li>
         <li class="timeline__item reveal" data-tag="design">
           <span class="timeline__dot"></span>
           <div class="timeline__content">
             <div class="timeline__row"><h3>ACCT Global</h3><span class="timeline__years">2022 – 2023</span></div>
-            <span class="tag tag--design">UX Designer Pleno</span>
+            <span class="tag tag--design">UX Designer Pl</span>
           </div>
         </li>
         <li class="timeline__item reveal" data-tag="design">
           <span class="timeline__dot"></span>
           <div class="timeline__content">
             <div class="timeline__row"><h3>fri.to</h3><span class="timeline__years">2021 – 2022</span></div>
-            <span class="tag tag--design">Product Design Pleno</span>
+            <span class="tag tag--design">Product Design Pl</span>
           </div>
         </li>
         <li class="timeline__item reveal" data-tag="frontend">
@@ -374,16 +374,16 @@
       <p class="section__lead reveal">Uma seleção de projetos de UX/UI e front-end. Conto a história de alguns deles com mais detalhe.</p>
 
       <div class="filter-bar reveal" role="group" aria-label="Filtrar projetos por categoria">
-        <button class="filter-btn is-active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="design">UX/UI</button>
-        <button class="filter-btn" data-filter="frontend">Front-End</button>
+        <button class="filter-btn is-active" data-filter="all" aria-pressed="true">Todos</button>
+        <button class="filter-btn" data-filter="design" aria-pressed="false">UX/UI</button>
+        <button class="filter-btn" data-filter="frontend" aria-pressed="false">Front-End</button>
       </div>
 
       <div class="projects-grid" id="projectsGrid">
 
         <article class="project-card reveal" data-category="design">
           <a class="project-card__link" href="pan.html">
-            <div class="project-card__thumb thumb--1"><span>PAN</span></div>
+            <div class="project-card__thumb thumb--1"><img src="imgs/projects/pan.png" alt="Tela do projeto Banco PAN" loading="lazy" width="1244" height="624"></div>
             <div class="project-card__body">
               <span class="tag tag--design">UX/UI</span>
               <h3>Banco PAN</h3>
@@ -395,7 +395,7 @@
 
         <article class="project-card reveal" data-category="design">
           <a class="project-card__link" href="projeta.html">
-            <div class="project-card__thumb thumb--2"><span>ELE</span></div>
+            <div class="project-card__thumb thumb--2"><img src="imgs/projects/projects.png" alt="Tela do projeto Electrolux Projeta" loading="lazy" width="1244" height="624"></div>
             <div class="project-card__body">
               <span class="tag tag--design">UX/UI</span>
               <h3>Electrolux Projeta</h3>
@@ -407,7 +407,7 @@
 
         <article class="project-card reveal" data-category="frontend">
           <a class="project-card__link" href="gati.html">
-            <div class="project-card__thumb thumb--3"><span>GATI</span></div>
+            <div class="project-card__thumb thumb--3"><img src="imgs/projects/gati.png" alt="Tela do projeto Gati Consultoria" loading="lazy" width="1244" height="624"></div>
             <div class="project-card__body">
               <span class="tag tag--frontend">Front-End</span>
               <h3>Gati Consultoria</h3>
@@ -419,7 +419,7 @@
 
         <article class="project-card reveal" data-category="frontend">
           <a class="project-card__link" href="maua.html">
-            <div class="project-card__thumb thumb--4"><span>IMT</span></div>
+            <div class="project-card__thumb thumb--4"><img src="imgs/projects/maua.png" alt="Tela do projeto Instituto Mauá de Tecnologia" loading="lazy" width="1244" height="624"></div>
             <div class="project-card__body">
               <span class="tag tag--frontend">Front-End</span>
               <h3>Instituto Mauá de Tecnologia</h3>
@@ -431,7 +431,7 @@
 
         <article class="project-card reveal" data-category="frontend">
           <a class="project-card__link" href="nova.html">
-            <div class="project-card__thumb thumb--5"><span>NOVA</span></div>
+            <div class="project-card__thumb thumb--5"><img src="imgs/projects/nova.png" alt="Tela do projeto Nova Chevrolet" loading="lazy" width="1244" height="624"></div>
             <div class="project-card__body">
               <span class="tag tag--frontend">Front-End</span>
               <h3>Nova Chevrolet</h3>
@@ -443,7 +443,7 @@
 
         <article class="project-card reveal" data-category="frontend">
           <a class="project-card__link" href="unica.html">
-            <div class="project-card__thumb thumb--6"><span>USE</span></div>
+            <div class="project-card__thumb thumb--6"><img src="imgs/projects/use.png" alt="Tela do projeto Use Única" loading="lazy" width="1244" height="625"></div>
             <div class="project-card__body">
               <span class="tag tag--frontend">Front-End</span>
               <h3>Use Única</h3>
@@ -455,11 +455,11 @@
 
         <article class="project-card reveal" data-category="frontend">
           <a class="project-card__link" href="norden.html">
-            <div class="project-card__thumb thumb--7"><span>NOR</span></div>
+            <div class="project-card__thumb thumb--7"><img src="imgs/projects/norden.png" alt="Tela do projeto Norden SA" loading="lazy" width="1244" height="624"></div>
             <div class="project-card__body">
               <span class="tag tag--frontend">Front-End</span>
-              <h3>Norden</h3>
-              <p>Uma comunicação ótima entre designers e programadores.</p>
+              <h3>Norden SA</h3>
+              <p>Um projeto de front-end construído em colaboração próxima com o design.</p>
               <span class="project-card__cta">Ver case <span aria-hidden="true">→</span></span>
             </div>
           </a>
