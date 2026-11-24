@@ -993,6 +993,36 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   font-style: italic;
 }
 
+.case-gallery {
+  display: grid;
+  gap: 1.2rem;
+  margin: 2.8rem 0 3.8rem;
+  max-width: 700px;
+}
+.case-gallery--mobile {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.case-gallery__item {
+  margin: 0;
+  padding: .65rem;
+  background: var(--bg-card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+}
+.case-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--radius-m) - 4px);
+}
+.case-gallery__item figcaption {
+  padding: .7rem .25rem .15rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  line-height: 1.45;
+}
+
 .case-result {
   background: var(--bg-card);
   border: 1px solid var(--line);
@@ -1087,6 +1117,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .site-footer__inner { flex-direction: column; text-align: center; }
 
   .education-list { grid-template-columns: 1fr; }
+  .case-gallery--mobile { grid-template-columns: 1fr; max-width: 380px; margin-left: auto; margin-right: auto; }
 
   .case-hero { padding: 2.4rem 0 0; }
   .case-nav__grid { grid-template-columns: 1fr; }
