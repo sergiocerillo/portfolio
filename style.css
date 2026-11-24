@@ -845,6 +845,13 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   font-size: clamp(1.4rem, 4vw, 2.4rem);
   color: rgba(20,22,27,.85);
 }
+.case-hero__art img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .9;
+}
 .art--pan { background: linear-gradient(135deg, #E85D97, #C9407A); }
 .art--projeta { background: linear-gradient(135deg, #F291C1, #C9407A); }
 .art--projeta span { color: #221; }
@@ -853,6 +860,7 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 .art--unica { background: linear-gradient(135deg, #55D6A3, #2E9973); }
 .art--unica span { color: #eef; }
 .art--norden { background: linear-gradient(135deg, #4ECDA0, #E85D97); }
+.art--gati { background: linear-gradient(135deg, #E85D97, #4ECDA0); }
 .art--nova { background: linear-gradient(135deg, #45C08C, #227A5A); }
 .art--nova span { color: #eef; }
 

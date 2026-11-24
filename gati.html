@@ -1,110 +1,143 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.classList.add('js');</script>
+<title>Gati Consultoria — Sérgio Cerillo</title>
+<meta name="description" content="Case de UX e front-end da Gati Consultoria: um projeto sobre alinhamento, comunicação e desenvolvimento de um site em WordPress.">
+<meta name="theme-color" content="#14161B">
+<link rel="canonical" href="https://sergiocerillo.github.io/portfolio/gati.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gati Consultoria — Sérgio Cerillo">
+<meta property="og:description" content="Case de UX e front-end da Gati Consultoria: um projeto sobre alinhamento, comunicação e desenvolvimento de um site em WordPress.">
+<meta property="og:url" content="https://sergiocerillo.github.io/portfolio/gati.html">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://sergiocerillo.github.io/portfolio/imgs/projects/gati.png">
+<meta property="og:image:alt" content="Tela do projeto Gati Consultoria">
+<meta name="twitter:card" content="summary_large_image">
 
-    <link rel="stylesheet" href="main.css">
-
-    <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
-    
-    <title>Gati Consultoria — Sérgio Cerillo</title>
-    <meta name="description" content="Case de UX e front-end da Gati Consultoria, incluindo decisões de comunicação, estrutura e desenvolvimento do site.">
-    <link rel="canonical" href="https://sergiocerillo.github.io/portfolio/gati.html">
+<link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="p-4 w-100 sticky-lg-top">
-        <div class="container-fluid">
-            <div class="row justify-content-around align-items-center">
-                <div class="col">
-                    <h2>
-                        <a href="index.html" class="">
-                            <img src="imgs/logo.svg" alt="" class="d-block mx-auto mx-md-0 mb-4 mb-md-0">
-                        </a>
-                    </h2>
-                </div>
-                
-                <div class="col-xl-2 col-lg-3 col-md-6 col-12">
-                    <nav class="d-flex justify-content-around">
-                        <a href="index.html#projetos" class="text-white-50 text-decoration-none fs-5 fw-normal">Projetos</a>
-                        <a href="https://wa.link/r7tgu2" target="_blank" rel="noopener noreferrer" class="text-white-50 text-decoration-none fs-5 fw-normal">Contato</a>
-                    </nav>
-                </div>
-            </div>
+<div class="progress-bar" id="progressBar"></div>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="nav-wrap" id="navWrap">
+  <nav class="nav container" aria-label="Navegação principal">
+    <a href="index.html" class="nav__brand">SC<span class="nav__brand-dot">.</span></a>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__menu" id="navMenu">
+      <li><a href="index.html#sobre">Sobre</a></li>
+      <li><a href="index.html#skills">Habilidades</a></li>
+      <li><a href="index.html#experiencia">Experiência</a></li>
+      <li><a href="index.html#projetos">Projetos</a></li>
+      <li><a href="index.html#escrita">Escrita</a></li>
+      <li><a href="index.html#contato" class="nav__cta">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="conteudo">
+  <section class="case-hero">
+    <div class="container">
+      <a class="case-back reveal" href="index.html#projetos">← Voltar aos projetos</a>
+      <span class="tag tag--frontend reveal">Front-End</span>
+      <h1 class="case-hero__title reveal">Gati Consultoria</h1>
+      <p class="case-hero__hook reveal">Um projeto que mostrou como comunicação, alinhamento e wireframes são tão importantes quanto o código.</p>
+
+      <dl class="case-meta reveal">
+        <div><dt>Cliente</dt><dd>Gati Consultoria</dd></div>
+        <div><dt>Papel</dt><dd>UX e Front-End</dd></div>
+        <div><dt>Entrega</dt><dd>Site em WordPress</dd></div>
+        <div><dt>Link</dt><dd><a href="https://www.gaticonsultoria.com.br" target="_blank" rel="noopener noreferrer">gaticonsultoria.com.br ↗</a></dd></div>
+      </dl>
+
+      <div class="case-hero__art reveal art--gati">
+        <img src="imgs/projects/gati.png" alt="Tela do site da Gati Consultoria" width="1244" height="624">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="case-body">
+        <p class="case-intro">A proposta inicial era evoluir o site existente da Gati Consultoria, tornando a experiência mais clara, atual e fácil de manter. O projeto acabou se tornando uma reflexão importante sobre escopo, comunicação e validação.</p>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">01</span><h2>Entender o problema antes da interface</h2></div>
+          <div class="case-step__content">
+            <p>O site anterior era uma One Page. A primeira decisão foi separar o conteúdo em páginas distintas, criando uma estrutura mais organizada para usuários e mecanismos de busca.</p>
+            <p>Antes de desenhar, analisei o fluxo existente, referências de consultorias e as necessidades de manutenção. O objetivo era construir uma base visual consistente, sem depender de imagens genéricas ou soluções difíceis de evoluir.</p>
+          </div>
         </div>
-    </header>
 
-    
-
-    <section class="py-3 my-4">
-        <div class="container">
-            <div class="row ps-0 ms-0 ps-lg-5 ms-lg-5">
-                <div class="col-lg-8 col-md-10 col-12">
-                    
-                    
-                    <a href="index.html#projetos" class="button-sm fulled mb-5 d-flex align-items-center">
-                        <i class="bi bi-arrow-left-short"></i>
-                        Voltar
-                    </a>
-
-                    <h1 class="display-4 fw-bold">
-                        Gati Consultoria
-                    </h1>
-                    <blockquote class="my-4">
-                        Resultados são importantes, mas alem de resultados acredito que devemos falar dos aprendizados e dos erros. Afinal quando tudo da certo tem algo de errado.
-                    </blockquote>
-                </div>   
-                <div class="col-lg-8 col-12">
-                    <p class="lh-lg fs-5">
-                        Inicialmente, fui convidado para criar o layout e desenvolver o site. Era uma ótima oportunidade para criar algo fácil e intuitivo, já que o projeto tratava-se de uma evolução do site existente, mas a proposta era mudar completamente o visual do site.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Então, logo comecei a entender o fluxo do site. O site era One Page, o que significava que tudo precisava ser separado em páginas distintas. Em algumas empresas anteriores, aprendi muito com especialistas em SEO, e eles sempre enfatizaram que o rankeamento para One Page nunca é ideal.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Depois de separar as páginas e criar um novo fluxo, comecei a criar um guia de estilo. Antes de fazer qualquer benchmarking, precisava saber o que eu teria em mãos para trabalhar. Encontrei ótimas cores para o site e decidi seguir o grid do Bootstrap. Como desenvolvedor, já estava familiarizado com HTML e CSS, o que facilitaria meu trabalho e também as futuras manutenções. Projetos vêm e vão, assim como desenvolvedores.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        A partir daí, comecei o meu adorado benchmarking. Existem muitos sites de consultorias diversos, mas todos usam imagens de forma muito genérica, pessoas aleatórias, gráficos e telas. Decidi não seguir esse caminho. Durante o processo, encontrei sites com layouts ultrapassados e fluxos estranhos. Depois de tudo isso, pensei: por que não criar algo novo? Afinal, sou responsável pelo design e programação, o projeto está em minhas mãos.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Então, foquei no design. Meu objetivo principal ao criar o layout foi pensar no eye tracking e colocar tudo o que fosse interessante na página inicial do site. Uma página inicial bem feita é um ótimo ponto de partida para as outras páginas.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Depois de terminar a página inicial, enviei para a cliente, mas ela levou quase uma semana para me dar o aval sobre o resultado. Durante essa semana, decidi criar todas as outras páginas como um agrado.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Quando finalmente recebi a resposta dela sobre o projeto, foi simples e negativa. Logo em seguida, ela decidiu seguir com um amigo dela que era designer. Pensei: ok, meu contato com ela foi praticamente inexistente (eu estava atuando como freelancer para uma agência). Se me conheço bem, teria feito muitas perguntas para ela, pois isso é essencial na nossa área, para evitar erros e frustrações de ambas as partes.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Duas semanas depois, o layout do amigo dela foi aprovado por completo, mas parcialmente reprovado por mim, já que ele me entregou o arquivo em PSD (arquivo do Photoshop), como se ainda estivéssemos em 2012. Além disso, o arquivo só continha a página inicial, as outras páginas não existiam.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Aceitei a situação, coloquei meus fones de ouvido e comecei a programar. Criei arquivos SCSS e instalei o WordPress. Após alguns dias, o layout estava totalmente desenvolvido, com algumas melhorias adicionais.
-                    </p>
-    
-                    <p class="lh-lg fs-5">
-                        Além de observar apenas os resultados dos projetos, acredito que é importante reconhecer os erros e aprender com eles. Ao olhar para trás, percebo que uma parte fundamental foi negligenciada: a comunicação, além do desenvolvimento do wireframe. O wireframe já me ajudou muito no passado, pois ajuda a alinhar as expectativas. Infelizmente, isso foi esquecido desta vez. Mas, bola pra frente e vamos em frente.
-                    </p>
-                    
-                    <a href="https://www.gaticonsultoria.com.br" target="_blank" rel="noopener noreferrer" class="button fulled mt-5 d-flex align-items-center">
-                        Conheça o projeto 
-                        <i class="bi bi-arrow-up-right"></i>
-                    </a>
-                </div> 
-            </div>
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">02</span><h2>Design e desenvolvimento lado a lado</h2></div>
+          <div class="case-step__content">
+            <p>Criei o guia visual e desenvolvi a estrutura usando o grid do Bootstrap, HTML e CSS. A familiaridade com o front-end ajudou a antecipar decisões de responsividade, componentes e manutenção futura.</p>
+            <ul class="case-list">
+              <li>Arquitetura com páginas independentes</li>
+              <li>Guia de estilos para cores, tipografia e espaçamento</li>
+              <li>Desenvolvimento responsivo com WordPress</li>
+              <li>Estrutura preparada para evolução de conteúdo</li>
+            </ul>
+          </div>
         </div>
-    </section>
+
+        <div class="case-note">
+          <span class="case-note__icon">↔</span>
+          <p><strong>Aprendizado central:</strong> um wireframe simples teria alinhado expectativas antes da implementação e reduzido retrabalho.</p>
+        </div>
+
+        <div class="case-step">
+          <div class="case-step__head"><span class="case-step__num">03</span><h2>Quando o processo também vira resultado</h2></div>
+          <div class="case-step__content">
+            <p>Depois que o layout foi alterado por outra pessoa, recebi um arquivo em PSD com apenas a página inicial. O desafio passou a ser transformar uma referência incompleta em um site funcional, criando as páginas restantes e resolvendo as decisões de interface durante o desenvolvimento.</p>
+            <p>O projeto foi concluído em WordPress, mas deixou uma lição que continuo levando para os trabalhos atuais: combinar descoberta, wireframes e checkpoints de aprovação antes de partir para a execução.</p>
+          </div>
+        </div>
+
+        <blockquote class="pull-quote">
+          <p>Resultados importam, mas os aprendizados e os erros também fazem parte da entrega.</p>
+        </blockquote>
+
+        <div class="case-result">
+          <h2>Considerações finais</h2>
+          <p>O case da Gati não é apenas sobre implementar um site. É sobre reconhecer que uma boa solução depende de comunicação clara, escopo compartilhado e validações frequentes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-nav">
+    <div class="container case-nav__grid">
+      <a class="case-nav__link case-nav__link--prev" href="pan.html">
+        <span class="case-nav__label">← Anterior</span>
+        <span class="case-nav__title">Banco PAN</span>
+      </a>
+      <a class="case-nav__link case-nav__link--next" href="maua.html">
+        <span class="case-nav__label">Próximo →</span>
+        <span class="case-nav__title">Instituto Mauá de Tecnologia</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p>© <span id="year"></span> Sérgio Cerillo — feito com HTML, CSS e um pouco de JS, sem frameworks.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo" hidden>↑</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
