@@ -335,6 +335,13 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   font-size: clamp(.95rem, 1.6vw, 1.15rem);
   margin-bottom: 1.6rem;
 }
+.hero__intro {
+  max-width: 620px;
+  color: var(--ink-dim);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.55;
+  margin-bottom: 2rem;
+}
 .hero__tagline {
   max-width: 46ch;
   font-size: clamp(1.05rem, 2vw, 1.3rem);
@@ -353,6 +360,19 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 @keyframes blink { 50% { opacity: 0; } }
 
 .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
+.hero__proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+}
+.hero__proof li {
+  padding: .35rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
 .hero__meta { }
 
 /* =========================================================
@@ -409,6 +429,13 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   font-size: .85rem;
   color: var(--ink-dim);
   margin-bottom: 1rem;
+}
+.skill-file__desc {
+  max-width: 42ch;
+  color: var(--ink-dim);
+  font-size: .88rem;
+  line-height: 1.5;
+  margin: .7rem 0 1.35rem;
 }
 .skill-list { display: flex; flex-wrap: wrap; gap: .55rem; }
 .skill-list li {
@@ -1006,6 +1033,18 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 1.2rem;
   margin-bottom: 3.5rem;
+}
+.case-gallery--optional {
+  display: none;
+  margin-top: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+.case-gallery--optional.is-ready {
+  display: block;
+}
+.case-gallery--optional > .case-gallery {
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 .case-motion__intro {
   color: var(--ink-dim);

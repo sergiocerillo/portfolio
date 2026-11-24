@@ -29,11 +29,34 @@
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
   const filterEmpty = document.getElementById('filterEmpty');
-  const skillBars = document.querySelectorAll('.skill-star');
   const backToTop = document.getElementById('backToTop');
   const copyBtn = document.getElementById('copyEmailBtn');
   const copyLabel = document.getElementById('copyEmailLabel');
   const progressBar = document.getElementById('progressBar');
+
+  /* ---------------------------------------------
+     Galerias opcionais de imagens dos cases
+     Basta criar o arquivo com o nome indicado no
+     HTML para ele aparecer automaticamente.
+  --------------------------------------------- */
+  document.querySelectorAll('[data-optional-gallery]').forEach((gallery) => {
+    const figures = gallery.querySelectorAll('figure');
+    figures.forEach((figure) => {
+      const image = figure.querySelector('img');
+      if (!image) return;
+
+      const showGallery = () => gallery.classList.add('is-ready');
+      const hideFigure = () => figure.remove();
+
+      image.addEventListener('load', showGallery, { once: true });
+      image.addEventListener('error', hideFigure, { once: true });
+
+      if (image.complete) {
+        if (image.naturalWidth > 0) showGallery();
+        else hideFigure();
+      }
+    });
+  });
 
   /* ---------------------------------------------
      Ano no rodapé
@@ -148,43 +171,6 @@
     setTimeout(type, 400);
   } else if (caret) {
     caret.style.display = 'none';
-  }
-
-  /* ---------------------------------------------
-     Skills: animação de barras de progresso
-  --------------------------------------------- */
-  function animateSkillBar(bar) {
-    const level = parseInt(bar.dataset.level, 10) || 0;
-    const fill = bar.querySelector('.skill-star__fill');
-    if (!fill) return;
-
-    if (prefersReducedMotion) {
-      fill.style.width = `${level}%`;
-      return;
-    }
-
-    setTimeout(() => {
-      fill.style.width = `${level}%`;
-    }, 100);
-  }
-
-  if (skillBars.length) {
-    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-      skillBars.forEach(animateSkillBar);
-    } else {
-      const skillObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animateSkillBar(entry.target);
-              skillObserver.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.4 }
-      );
-      skillBars.forEach((bar) => skillObserver.observe(bar));
-    }
   }
 
   /* ---------------------------------------------

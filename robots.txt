@@ -4,8 +4,3 @@ Allow: /
 # Sitemap
 Sitemap: https://sergiocerillo.github.io/portfolio/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1
-
-# Disallow specific paths (if needed)
-Disallow: /imgs/
